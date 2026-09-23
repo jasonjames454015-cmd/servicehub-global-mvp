@@ -1,25 +1,13 @@
 # ServiceHub Global – MVP
 
-Temporary working name: **ServiceHub Global**
+Public repo: https://github.com/jasonjames454015-cmd/servicehub-global-mvp  
+Free host (existing): https://servicehub-global-mvp.netlify.app
 
-Global service marketplace connecting customers with providers.
-
-## Current status
-Static frontend MVP (landing, request form, provider onboarding, dashboards, legal stubs).
-
-## Free deployment
-Intended for free-tier Netlify or Vercel.
+## What this is
+Static marketplace + digital products + compliance-first research notes.  
+Forms persist in **localStorage only**. Revenue is tracked in `SCOREBOARD.md` and is currently **$0**.
 
 ## Rules
-- No paid plans or billing without explicit approval
-- No fabricated clients or results
-- Continuous improvement after first live version
-
-## Structure
-- `index.html` – Landing
-- `pages/request.html` – Customer request
-- `pages/provider.html` – Provider profile
-- `pages/dashboard.html` – Customer/provider mock dashboard
-- `pages/admin.html` – Admin mock
-- `privacy.html` / `terms.html`
-- `robots.txt` / `sitemap.xml`
+- No paid plans without approval
+- No fabricated clients, deals, or contacts
+- Real-estate content is research, not brokerage

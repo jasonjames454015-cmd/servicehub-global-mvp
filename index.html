@@ -3,100 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ServiceHub Global – Connect Customers with Service Providers</title>
-  <meta name="description" content="Global marketplace connecting customers with service providers. AI-assisted matching, messaging, reviews and simple onboarding. Mobile-first.">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="ServiceHub Global – Connect Customers with Providers">
-  <meta property="og:description" content="Request services or offer your skills. Simple matching and communication.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0f766e">
-  <style>
-    :root { --primary: #0f766e; --primary-dark: #0d5c56; --bg: #f8fafc; --text: #0f172a; --muted: #64748b; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
-    header { background: white; border-bottom: 1px solid #e2e8f0; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
-    .logo { font-weight: 700; font-size: 1.25rem; color: var(--primary); }
-    nav a { margin-left: 1.5rem; text-decoration: none; color: var(--muted); font-size: 0.95rem; }
-    nav a:hover { color: var(--primary); }
-    .hero { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-    .hero h1 { font-size: 2.75rem; line-height: 1.15; margin-bottom: 1rem; }
-    .hero p { color: var(--muted); font-size: 1.15rem; margin-bottom: 2rem; }
-    .btn { display: inline-block; background: var(--primary); color: white; padding: 0.85rem 1.75rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
-    .btn:hover { background: var(--primary-dark); }
-    .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); margin-left: 0.75rem; }
-    .features { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
-    .features h2 { text-align: center; margin-bottom: 2.5rem; font-size: 1.75rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-    .card { background: white; border-radius: 0.75rem; padding: 1.75rem; border: 1px solid #e2e8f0; }
-    .card h3 { margin-bottom: 0.5rem; color: var(--primary); }
-    .cta { background: var(--primary); color: white; text-align: center; padding: 4rem 1.5rem; margin-top: 3rem; }
-    .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
-    .cta .btn { background: white; color: var(--primary); }
-    footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.9rem; }
-    @media (max-width: 768px) { .hero { grid-template-columns: 1fr; padding: 2.5rem 1rem; } .hero h1 { font-size: 2rem; } nav a { display: none; } }
-  </style>
+  <title>ServiceHub Global – Services, digital products, research</title>
+  <meta name="description" content="Connect customers with service providers. Free digital tools. Compliance-first market research.">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
   <header>
-    <div class="logo">ServiceHub Global</div>
+    <a class="logo" href="index.html">ServiceHub Global</a>
     <nav>
-      <a href="#features">Features</a>
-      <a href="#how">How it works</a>
-      <a href="#signup">Get started</a>
+      <a class="desk" href="pages/request.html">Request</a>
+      <a class="desk" href="pages/provider.html">Provide</a>
+      <a href="pages/products.html">Products</a>
+      <a href="pages/research.html">Research</a>
+      <a href="pages/dashboard.html">Dashboard</a>
     </nav>
   </header>
-
-  <section class="hero">
+  <section class="wrap" style="display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center;">
     <div>
-      <h1>Connect with trusted service providers worldwide</h1>
-      <p>Customers request services. Providers respond. AI helps match the right fit. Simple, transparent, global from day one.</p>
-      <a href="pages/request.html" class="btn">Join as Customer</a>
-      <a href="pages/provider.html" class="btn btn-outline">Join as Provider</a>
+      <h1>Get work done. Offer skills. Ship digital products at $0 cost.</h1>
+      <p class="muted" style="margin:1rem 0 1.5rem;">Customers post requests. Providers list skills. Everything stores in your browser until a backend is justified by real demand. No fake clients. No paid ads.</p>
+      <a class="btn" href="pages/request.html">Post a request</a>
+      <a class="btn btn-outline" href="pages/provider.html" style="margin-left:.6rem;">List as provider</a>
     </div>
-    <div style="background: #e0f2f1; border-radius: 1rem; height: 280px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: 600;">
-      [MVP Illustration / Demo Placeholder]
+    <div class="card">
+      <h2 style="margin-top:0;">This browser’s activity</h2>
+      <p class="muted" id="stats">Loading…</p>
+      <p class="note">Counts are local only. They are not revenue.</p>
     </div>
   </section>
-
-  <section class="features" id="features">
-    <h2>Core capabilities (MVP)</h2>
+  <section class="wrap">
+    <h2>Three $0 money paths</h2>
     <div class="grid">
-      <div class="card"><h3>Customer accounts</h3><p>Sign up, create requests, track status, message providers, leave reviews.</p></div>
-      <div class="card"><h3>Provider profiles</h3><p>Onboard with categories, skills, rates, portfolio. Get matched to relevant requests.</p></div>
-      <div class="card"><h3>Smart matching</h3><p>Category + location + availability filters. AI assistance for quality ranking (roadmap).</p></div>
-      <div class="card"><h3>Messaging & status</h3><p>Direct contact flow, request status tracking, basic dispute flags for admin.</p></div>
-      <div class="card"><h3>Dashboards</h3><p>Customer, provider and admin views for requests, messages and analytics basics.</p></div>
-      <div class="card"><h3>Revenue ready</h3><p>Architecture for commissions, subscriptions and lead fees (payments integration later).</p></div>
+      <div class="card"><h3>Services</h3><p>Fixed-scope offers: follow-up systems, one-page sites, spreadsheet cleanup.</p></div>
+      <div class="card"><h3>Digital products</h3><p>Free templates now; paid versions only after a real buyer asks.</p></div>
+      <div class="card"><h3>Research memos</h3><p>Public-source Lagos/Nigeria property notes for licensed operators — not brokerage.</p></div>
     </div>
   </section>
-
-  <section class="features" id="how">
-    <h2>How it works</h2>
-    <div class="grid">
-      <div class="card"><h3>1. Sign up</h3><p>Choose customer or provider role. Complete lightweight profile.</p></div>
-      <div class="card"><h3>2. Request or list</h3><p>Customers post needs. Providers set availability and categories.</p></div>
-      <div class="card"><h3>3. Match & talk</h3><p>See matches, message, agree terms. Track progress.</p></div>
-      <div class="card"><h3>4. Review & grow</h3><p>Leave feedback. Reputation builds over time.</p></div>
-    </div>
-  </section>
-
-  <section class="cta" id="signup">
-    <h2>Ready to join the early network?</h2>
-    <p style="margin-bottom: 1.5rem; opacity: 0.9;">MVP frontend is live locally. Try the request or provider forms, or leave your email for the waitlist.</p>
-    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem;">
-      <a href="pages/request.html" class="btn" style="background: white; color: var(--primary);">Create request</a>
-      <a href="pages/provider.html" class="btn" style="background: white; color: var(--primary);">Provider profile</a>
-    </div>
-    <form style="display: inline-flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;" onsubmit="event.preventDefault(); alert('Thanks – waitlist recorded locally for now. Full backend coming.');">
-      <input type="email" placeholder="you@email.com" required style="padding: 0.85rem 1rem; border-radius: 0.5rem; border: none; min-width: 240px;">
-      <button type="submit" class="btn">Join waitlist</button>
+  <section class="wrap">
+    <h2>Waitlist (local)</h2>
+    <form id="wl" style="display:flex;gap:.5rem;flex-wrap:wrap;">
+      <input type="email" id="email" placeholder="you@email.com" required style="max-width:280px;">
+      <button class="btn" type="submit">Save locally</button>
     </form>
+    <p class="ok" id="wlok">Saved in this browser only.</p>
   </section>
-
   <footer>
-    <p>ServiceHub Global – Early MVP. Not yet live for transactions.</p>
-    <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
-    <p>Built for continuous improvement.</p>
+    <p>MVP. No payments live. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    <p>https://servicehub-global-mvp.netlify.app</p>
   </footer>
+  <script src="js/store.js"></script>
+  <script>
+    const s = SHG.stats();
+    document.getElementById("stats").textContent =
+      s.requests + " requests · " + s.providers + " providers · " + s.waitlist + " waitlist emails";
+    document.getElementById("wl").onsubmit = function (e) {
+      e.preventDefault();
+      SHG.addWaitlist(document.getElementById("email").value);
+      document.getElementById("wlok").style.display = "block";
+    };
+  </script>
 </body>
 </html>
