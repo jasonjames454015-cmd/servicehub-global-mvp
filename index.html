@@ -3,27 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ServiceHub Global – Services, digital products, research</title>
-  <meta name="description" content="Connect customers with service providers. Free digital tools. Compliance-first market research.">
+  <title>ServiceHub Global – $0-cost service marketplace MVP</title>
+  <meta name="description" content="Connect customers with service providers. Free digital tools. Compliance-first Lagos property research. No paid ads.">
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
   <header>
     <a class="logo" href="index.html">ServiceHub Global</a>
     <nav>
-      <a class="desk" href="pages/request.html">Request</a>
-      <a class="desk" href="pages/provider.html">Provide</a>
+      <a href="pages/request.html">Request</a>
+      <a href="pages/provider.html">Provide</a>
+      <a href="pages/quote.html">Quote</a>
       <a href="pages/products.html">Products</a>
       <a href="pages/research.html">Research</a>
+      <a href="pages/pipeline.html">Pipeline</a>
       <a href="pages/dashboard.html">Dashboard</a>
     </nav>
   </header>
   <section class="wrap" style="display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center;">
     <div>
-      <h1>Get work done. Offer skills. Ship digital products at $0 cost.</h1>
-      <p class="muted" style="margin:1rem 0 1.5rem;">Customers post requests. Providers list skills. Everything stores in your browser until a backend is justified by real demand. No fake clients. No paid ads.</p>
+      <p class="badge">Free deploy · localStorage only · $0 spend</p>
+      <h1>Get work done. Offer skills. Sell services after a real buyer appears.</h1>
+      <p class="muted" style="margin:1rem 0 1.5rem;">Customers post requests. Providers list skills. Quotes and pipeline stay in this browser until demand pays for a backend. No fake clients. No paid ads.</p>
       <a class="btn" href="pages/request.html">Post a request</a>
-      <a class="btn btn-outline" href="pages/provider.html" style="margin-left:.6rem;">List as provider</a>
+      <a class="btn btn-outline" href="pages/quote.html" style="margin-left:.6rem;">Build a quote</a>
     </div>
     <div class="card">
       <h2 style="margin-top:0;">This browser’s activity</h2>
@@ -34,9 +37,9 @@
   <section class="wrap">
     <h2>Three $0 money paths</h2>
     <div class="grid">
-      <div class="card"><h3>Services</h3><p>Fixed-scope offers: follow-up systems, one-page sites, spreadsheet cleanup.</p></div>
-      <div class="card"><h3>Digital products</h3><p>Free templates now; paid versions only after a real buyer asks.</p></div>
-      <div class="card"><h3>Research memos</h3><p>Public-source Lagos/Nigeria property notes for licensed operators — not brokerage.</p></div>
+      <div class="card"><h3>Services</h3><p>Fixed-scope offers: follow-up systems, one-page sites, spreadsheet cleanup. Price with the quote tool. Collect only after a signed yes.</p></div>
+      <div class="card"><h3>Digital products</h3><p>Free templates now; paid versions only after a real buyer asks. Lead magnets, not invented sales.</p></div>
+      <div class="card"><h3>Research memos</h3><p>Public-source Lagos/Nigeria property notes for licensed operators — not brokerage, not title work, not escrow.</p></div>
     </div>
   </section>
   <section class="wrap">
@@ -48,14 +51,14 @@
     <p class="ok" id="wlok">Saved in this browser only.</p>
   </section>
   <footer>
-    <p>MVP. No payments live. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    <p>MVP. No payments live. Cash collected: $0. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
     <p>https://servicehub-global-mvp.netlify.app</p>
   </footer>
   <script src="js/store.js"></script>
   <script>
     const s = SHG.stats();
     document.getElementById("stats").textContent =
-      s.requests + " requests · " + s.providers + " providers · " + s.waitlist + " waitlist emails";
+      s.requests + " requests · " + s.providers + " providers · " + s.quotes + " quotes · " + s.pipeline + " pipeline rows · " + s.waitlist + " waitlist emails";
     document.getElementById("wl").onsubmit = function (e) {
       e.preventDefault();
       SHG.addWaitlist(document.getElementById("email").value);
