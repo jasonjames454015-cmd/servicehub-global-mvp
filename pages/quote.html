@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote builder – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="pipeline.html">Pipeline</a><a href="products.html">Products</a></nav>
+  </header>
+  <div class="wrap">
+    <h1>Fixed-scope quote builder</h1>
+    <p class="note">Prices are suggested ranges, not collected money. Nothing here is an invoice until a human sends it and a buyer pays.</p>
+    <div class="grid">
+      <form class="card" id="qf">
+        <label>Offer
+          <select id="offer">
+            <option value="250">Lead follow-up system — $250–$750</option>
+            <option value="200">One-page site — $200–$500</option>
+            <option value="150">Spreadsheet cleanup — $150–$400</option>
+            <option value="200">Content pack — $200–$450</option>
+            <option value="180">Lagos RE desk memo (public sources) — $180–$400</option>
+          </select>
+        </label>
+        <label>Complexity (1=simple, 3=heavy)
+          <select id="cx"><option>1</option><option>2</option><option>3</option></select>
+        </label>
+        <label>Prospect name / shop (optional)<input id="who" placeholder="Not a verified lead"></label>
+        <label>Notes<textarea id="notes" rows="4" placeholder="Scope, exclusions, delivery days"></textarea></label>
+        <button class="btn" type="submit">Save quote locally</button>
+        <p class="ok" id="ok">Saved in this browser.</p>
+      </form>
+      <div class="card">
+        <h2 style="margin-top:0;">Suggested price</h2>
+        <p id="price" style="font-size:2rem;font-weight:800;">$250</p>
+        <p class="muted" id="explain">Base $250 × complexity 1.</p>
+        <p class="warn">Do not log this as pipeline value until the prospect replies.</p>
+      </div>
+    </div>
+    <h2>Saved quotes</h2>
+    <div id="list"></div>
+  </div>
+  <script src="../js/store.js"></script>
+  <script>
+    const offer = document.getElementById("offer");
+    const cx = document.getElementById("cx");
+    function calc() {
+      const base = Number(offer.value);
+      const m = Number(cx.value);
+      const p = base * m;
+      document.getElementById("price").textContent = "$" + p;
+      document.getElementById("explain").textContent = "Base $" + base + " × complexity " + m + ".";
+      return p;
+    }
+    offer.onchange = cx.onchange = calc; calc();
+    function render() {
+      const rows = SHG.load().quotes;
+      document.getElementById("list").innerHTML = rows.length ? "<table><tr><th>When</th><th>Who</th><th>Price</th><th>Notes</th></tr>" +
+        rows.map(r => "<tr><td>"+r.created.slice(0,10)+"</td><td>"+(r.who||"—")+"</td><td>$"+r.price+"</td><td>"+(r.notes||"")+"</td></tr>").join("") + "</table>" : "<p class='muted'>None yet.</p>";
+    }
+    document.getElementById("qf").onsubmit = function (e) {
+      e.preventDefault();
+      SHG.addQuote({ offer: offer.options[offer.selectedIndex].text, price: calc(), who: document.getElementById("who").value, notes: document.getElementById("notes").value });
+      document.getElementById("ok").style.display = "block";
+      render();
+    };
+    render();
+  </script>
+</body>
+</html>

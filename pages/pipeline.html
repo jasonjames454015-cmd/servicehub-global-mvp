@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="quote.html">Quote</a><a href="dashboard.html">Dashboard</a></nav>
+  </header>
+  <div class="wrap">
+    <h1>Honest pipeline</h1>
+    <p class="note">Value stays $0 until status is “won” and a receipt exists. This tool will not invent deals. Do not mark won without proof.</p>
+    <form class="card" id="pf">
+      <label>Name / company<input id="name" required placeholder="Person you actually spoke with"></label>
+      <label>Source<select id="src"><option>own network</option><option>inbound site</option><option>public directory</option><option>warm intro</option></select></label>
+      <label>Offer<input id="offer" placeholder="Follow-up system / site / memo"></label>
+      <label>Status
+        <select id="st">
+          <option value="idea">idea (not a lead)</option>
+          <option value="contacted">contacted</option>
+          <option value="replied">replied</option>
+          <option value="scoped">scoped</option>
+          <option value="won">won — only with receipt</option>
+          <option value="lost">lost</option>
+        </select>
+      </label>
+      <label>Notes<textarea id="notes" rows="3"></textarea></label>
+      <button class="btn" type="submit">Add row</button>
+    </form>
+    <p id="sum" class="muted"></p>
+    <div id="list"></div>
+  </div>
+  <script src="../js/store.js"></script>
+  <script>
+    function render() {
+      const rows = SHG.load().pipeline;
+      const won = rows.filter(r => r.status === "won").length;
+      document.getElementById("sum").textContent = rows.length + " rows · won count " + won + " · verified cash still $0 unless SCOREBOARD is updated from a receipt.";
+      document.getElementById("list").innerHTML = rows.length ? "<table><tr><th>When</th><th>Who</th><th>Source</th><th>Offer</th><th>Status</th></tr>" +
+        rows.map(r => "<tr><td>"+r.created.slice(0,10)+"</td><td>"+r.name+"</td><td>"+r.source+"</td><td>"+(r.offer||"")+"</td><td>"+r.status+"</td></tr>").join("") + "</table>" : "<p class='muted'>Empty. That is correct until outreach happens.</p>";
+    }
+    document.getElementById("pf").onsubmit = function (e) {
+      e.preventDefault();
+      const st = document.getElementById("st").value;
+      if (st === "won") {
+        alert("Won is blocked in this form until a receipt is filed in SCOREBOARD.md. Add as 'scoped' instead.");
+        return;
+      }
+      SHG.addPipeline({
+        name: document.getElementById("name").value,
+        source: document.getElementById("src").value,
+        offer: document.getElementById("offer").value,
+        status: st,
+        notes: document.getElementById("notes").value
+      });
+      render();
+      e.target.reset();
+    };
+    render();
+  </script>
+</body>
+</html>
