@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-09-24 14:25 WAT  
+Last updated: 2026-09-25 14:20 WAT  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -21,19 +21,21 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Live URL | https://servicehub-global-mvp.netlify.app |
 | Persistence | Browser localStorage only (`shg-v2`) |
 | Transactions | Disabled |
-| New this session | Quote builder, honest pipeline (won blocked), expanded research memo, richer products/SOP |
+| New this session | Invoice estimator (not payment), US public-source research desk, richer lead magnets, official NBS Q2 2026 catalog link, Netlify Forms config file |
 
-## Work completed this session (2026-09-24)
+## Work completed this session (2026-09-25)
 
-- Confirmed workspace artifacts were empty; resumed from existing GitHub MVP + Netlify site `servicehub-global-mvp`.
-- Upgraded static app: quote calculator, pipeline logger that refuses “won” without a receipt, dashboard stats for quotes/pipeline.
-- Expanded Lagos/Nigeria research from free public sources (NBS site, Punch coverage of Q2 2026 GDP, Lagos landonline portal). Labeled secondary press vs official PDF.
-- Strengthened $0 outreach playbook and three lead-magnet text products.
-- Did **not** send outreach (no access to the operator’s real phone/email inbox from this sandbox). Contacts remain 0.
+- Workspace artifacts were empty again; resumed from GitHub `servicehub-global-mvp`.
+- Added a local invoice estimator that prints a PDF-ready page but cannot mark cash collected.
+- Added `docs/RESEARCH-US-PUBLIC.md`: FHFA HPI, Census ACS, county assessor/GIS, data.gov, Zillow Research download page — public research only, not MLS or brokerage.
+- Tightened Lagos memo with NBS microdata catalog URL for the official Q2 2026 ZIP.
+- Expanded three lead-magnet texts into usable SOPs/checklists.
+- Added `netlify.toml` + `docs/NETLIFY-FORMS.md`.
+- Did **not** send outreach. Contacts remain 0.
 - Did **not** record revenue.
 
 ## Blockers
 
 - Cannot execute real WhatsApp/email outreach from this environment.
-- Netlify Forms not enabled; waitlist stays local.
-- Official NBS Q2 2026 PDF should be attached to the memo once downloaded from nigerianstat.gov.ng (press summaries used this session).
+- Netlify Forms still need a one-click enable in the Netlify UI (free).
+- Official NBS Q2 2026 PDF is linked, not attached.

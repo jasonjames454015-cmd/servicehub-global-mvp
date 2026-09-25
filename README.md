@@ -11,3 +11,7 @@ Forms persist in **localStorage only**. Revenue is tracked in `SCOREBOARD.md` an
 - No paid plans without approval
 - No fabricated clients, deals, or contacts
 - Real-estate content is research, not brokerage
+- Never spend money from this operator loop
+
+## This session (2026-09-25)
+Invoice estimator page, US public-source memo, official NBS catalog link, Netlify Forms attributes on waitlist, expanded lead magnets.
