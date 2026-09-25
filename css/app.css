@@ -22,4 +22,6 @@ footer { text-align:center; padding:2rem; color:var(--muted); font-size:.9rem; }
 table { width:100%; border-collapse:collapse; font-size:.92rem; background:#fff; }
 th, td { border:1px solid #e2e8f0; padding:.55rem .7rem; text-align:left; }
 .note { font-size:.85rem; color:var(--muted); margin-top:1rem; }
+.warn { background:#fff7ed; border:1px solid #fdba74; color:#9a3412; padding:.75rem 1rem; border-radius:.5rem; margin:1rem 0; }
+.badge { display:inline-block; background:#ccfbf1; color:#115e59; font-size:.8rem; font-weight:600; padding:.2rem .55rem; border-radius:999px; }
 @media (max-width:768px) { h1 { font-size:1.7rem; } nav a.desk { display:none; } }
