@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ServiceHub Global – $0-cost service marketplace MVP</title>
-  <meta name="description" content="Connect customers with service providers. Free digital tools. Compliance-first Lagos property research. No paid ads.">
+  <meta name="description" content="Connect customers with service providers. Free digital tools. Compliance-first Lagos and US public-source property research. No paid ads.">
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
       <a href="pages/request.html">Request</a>
       <a href="pages/provider.html">Provide</a>
       <a href="pages/quote.html">Quote</a>
+      <a href="pages/invoice.html">Invoice</a>
       <a href="pages/products.html">Products</a>
       <a href="pages/research.html">Research</a>
       <a href="pages/pipeline.html">Pipeline</a>
@@ -39,13 +40,15 @@
     <div class="grid">
       <div class="card"><h3>Services</h3><p>Fixed-scope offers: follow-up systems, one-page sites, spreadsheet cleanup. Price with the quote tool. Collect only after a signed yes.</p></div>
       <div class="card"><h3>Digital products</h3><p>Free templates now; paid versions only after a real buyer asks. Lead magnets, not invented sales.</p></div>
-      <div class="card"><h3>Research memos</h3><p>Public-source Lagos/Nigeria property notes for licensed operators — not brokerage, not title work, not escrow.</p></div>
+      <div class="card"><h3>Research memos</h3><p>Public-source Lagos/Nigeria and US ZIP notes for licensed operators — not brokerage, not title work, not escrow.</p></div>
     </div>
   </section>
   <section class="wrap">
     <h2>Waitlist (local)</h2>
-    <form id="wl" style="display:flex;gap:.5rem;flex-wrap:wrap;">
-      <input type="email" id="email" placeholder="you@email.com" required style="max-width:280px;">
+    <form id="wl" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:flex;gap:.5rem;flex-wrap:wrap;">
+      <input type="hidden" name="form-name" value="waitlist">
+      <p style="display:none;"><label>Don’t fill <input name="bot-field"></label></p>
+      <input type="email" id="email" name="email" placeholder="you@email.com" required style="max-width:280px;">
       <button class="btn" type="submit">Save locally</button>
     </form>
     <p class="ok" id="wlok">Saved in this browser only.</p>
