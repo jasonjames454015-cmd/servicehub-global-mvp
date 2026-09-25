@@ -1,2 +1,21 @@
-Education only. Hire a lawyer/surveyor.
-Survey plan, root of title, consent, encumbrance, inspection vs docs, short-let rules, who holds originals.
+ServiceHub Global — Public-source property desk checklist (not a title search)
+
+Lagos
+[ ] NBS latest GDP tables opened from official catalog (not a news screenshot)
+[ ] landonline.lagosstate.gov.ng search attempted; result saved as screenshot + URL
+[ ] Survey plan number asked from the owner
+[ ] CTC / LUC / consent status asked; copies requested, not invented
+[ ] Asking price from a portal labeled asking, not sold
+[ ] Disclaimer: not brokerage, not valuation, not legal advice
+
+US ZIP / county
+[ ] FHFA HPI series downloaded for the metro/ZIP
+[ ] Census ACS 5-year: value, rent, vacancy
+[ ] County assessor recorded sales (3-5)
+[ ] GIS flood/zoning layer if the county publishes it
+[ ] No MLS fields used unless you have a license + feed
+
+Do not
+- Hold deposits
+- Draft deeds
+- Promise a sure deal

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice estimator – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav>
+      <a href="quote.html">Quote</a>
+      <a href="pipeline.html">Pipeline</a>
+    </nav>
+  </header>
+  <div class="wrap">
+    <h1>Invoice estimator</h1>
+    <p class="warn">This page drafts text only. It does not collect money. Do not treat a draft as cash received. SCOREBOARD stays $0 until a real receipt exists.</p>
+    <form class="card" id="inv">
+      <label>From<input id="from" required placeholder="Your name / trade"></label>
+      <label>Bill to<input id="to" required placeholder="Client name — only if they exist"></label>
+      <label>Scope<textarea id="scope" required placeholder="What will be delivered"></textarea></label>
+      <label>Amount (USD)<input id="amt" type="number" min="1" step="1" required></label>
+      <label>Status
+        <select id="st">
+          <option value="draft">draft (default)</option>
+          <option value="sent">sent — not paid</option>
+        </select>
+      </label>
+      <button class="btn" type="submit">Save draft locally</button>
+      <button class="btn btn-outline" type="button" onclick="window.print()">Print / save PDF</button>
+    </form>
+    <p class="ok" id="ok">Draft stored in this browser. Not revenue.</p>
+    <div class="card" id="preview" style="margin-top:1rem;"></div>
+  </div>
+  <script src="../js/store.js"></script>
+  <script>
+    document.getElementById("inv").onsubmit = function (e) {
+      e.preventDefault();
+      const row = {
+        from: document.getElementById("from").value,
+        to: document.getElementById("to").value,
+        scope: document.getElementById("scope").value,
+        amount: Number(document.getElementById("amt").value),
+        status: document.getElementById("st").value
+      };
+      SHG.addQuote({ kind: "invoice-draft", ...row, total: row.amount });
+      document.getElementById("preview").innerHTML =
+        "<h2>Draft invoice</h2><p><strong>From:</strong> "+row.from+"</p><p><strong>Bill to:</strong> "+row.to+
+        "</p><p>"+row.scope+"</p><p><strong>Amount:</strong> $"+row.amount.toFixed(2)+
+        "</p><p class='note'>Status: "+row.status+" · not collected</p>";
+      document.getElementById("ok").style.display = "block";
+    };
+  </script>
+</body>
+</html>
