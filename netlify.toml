@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = false
+
+# Forms are free on Netlify. The waitlist form uses name="waitlist".
+# Enable Forms in the site UI; this file does not by itself collect emails.
