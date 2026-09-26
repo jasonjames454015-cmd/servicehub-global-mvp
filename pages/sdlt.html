@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDLT estimator (educational) – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav>
+      <a href="research.html">Research</a>
+      <a href="quote.html">Quote</a>
+    </nav>
+  </header>
+  <div class="wrap">
+    <p class="badge">Educational reprint of GOV.UK bands · not tax advice</p>
+    <h1>Stamp Duty Land Tax estimator</h1>
+    <p class="warn">England and Northern Ireland only. Confirm on the official calculator before any transaction: <a href="https://www.tax.service.gov.uk/calculate-stamp-duty-land-tax">GOV.UK SDLT calculator</a>.</p>
+    <form id="f" class="card">
+      <label>Purchase price (£)
+        <input type="number" id="price" min="0" step="1" value="295000" required>
+      </label>
+      <label>Buyer type
+        <select id="kind">
+          <option value="main">Only residential property after purchase</option>
+          <option value="ftb">First-time buyer (price ≤ £500,000)</option>
+          <option value="add">Additional dwelling (higher rates)</option>
+        </select>
+      </label>
+      <button class="btn" type="submit">Estimate</button>
+    </form>
+    <div class="card" id="out" hidden>
+      <h2>Estimate</h2>
+      <p id="result"></p>
+      <p class="muted" id="steps"></p>
+      <p class="note">Does not include non-UK resident surcharge, company rates, or lease NPV. Cash collected from this tool: £0.</p>
+    </div>
+  </div>
+  <script>
+    function sliceTax(price, bands) {
+      let remaining = price, last = 0, tax = 0, lines = [];
+      for (const [cap, rate] of bands) {
+        const slice = Math.max(0, Math.min(remaining, cap - last));
+        const t = slice * rate;
+        if (slice > 0) lines.push("£" + slice.toLocaleString() + " @ " + (rate * 100) + "% = £" + t.toLocaleString());
+        tax += t; remaining -= slice; last = cap;
+        if (remaining <= 0) break;
+      }
+      return { tax, lines };
+    }
+    const MAIN = [[125000, 0], [250000, 0.02], [925000, 0.05], [1500000, 0.10], [Infinity, 0.12]];
+    const ADD = [[125000, 0.05], [250000, 0.07], [925000, 0.10], [1500000, 0.15], [Infinity, 0.17]];
+    document.getElementById("f").onsubmit = function (e) {
+      e.preventDefault();
+      const price = Number(document.getElementById("price").value);
+      const kind = document.getElementById("kind").value;
+      let r;
+      if (kind === "ftb") {
+        if (price > 500000) r = sliceTax(price, MAIN);
+        else r = sliceTax(price, [[300000, 0], [500000, 0.05], [Infinity, 0.05]]);
+      } else if (kind === "add") r = sliceTax(price, ADD);
+      else r = sliceTax(price, MAIN);
+      document.getElementById("out").hidden = false;
+      document.getElementById("result").textContent = "Estimated SDLT £" + Math.round(r.tax).toLocaleString();
+      document.getElementById("steps").textContent = r.lines.join(" · ");
+    };
+  </script>
+</body>
+</html>
