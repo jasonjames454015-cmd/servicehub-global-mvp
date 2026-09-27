@@ -17,13 +17,13 @@
       <a href="pages/invoice.html">Invoice</a>
       <a href="pages/products.html">Products</a>
       <a href="pages/research.html">Research</a>
+      <a href="pages/sdlt.html">SDLT</a>
       <a href="pages/pipeline.html">Pipeline</a>
-      <a href="pages/dashboard.html">Dashboard</a>
     </nav>
   </header>
   <section class="wrap" style="display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:center;">
     <div>
-      <p class="badge">Free deploy · localStorage only · $0 spend</p>
+      <p class="badge">Free deploy · localStorage + Netlify Forms · $0 spend</p>
       <h1>Get work done. Offer skills. Sell services after a real buyer appears.</h1>
       <p class="muted" style="margin:1rem 0 1.5rem;">Customers post requests. Providers list skills. Quotes and pipeline stay in this browser until demand pays for a backend. No fake clients. No paid ads.</p>
       <a class="btn" href="pages/request.html">Post a request</a>
@@ -40,18 +40,19 @@
     <div class="grid">
       <div class="card"><h3>Services</h3><p>Fixed-scope offers: follow-up systems, one-page sites, spreadsheet cleanup. Price with the quote tool. Collect only after a signed yes.</p></div>
       <div class="card"><h3>Digital products</h3><p>Free templates now; paid versions only after a real buyer asks. Lead magnets, not invented sales.</p></div>
-      <div class="card"><h3>Research memos</h3><p>Public-source Lagos/Nigeria and US ZIP notes for licensed operators — not brokerage, not title work, not escrow.</p></div>
+      <div class="card"><h3>Research memos</h3><p>Public-source Lagos/Nigeria, NI/UK and US notes for licensed operators — not brokerage, not title work, not escrow.</p></div>
     </div>
   </section>
   <section class="wrap">
-    <h2>Waitlist (local)</h2>
-    <form id="wl" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:flex;gap:.5rem;flex-wrap:wrap;">
+    <h2>Waitlist</h2>
+    <p class="muted">Saved in this browser and posted to the free Netlify form inbox if the site is live.</p>
+    <form id="wl" name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" style="display:flex;gap:.5rem;flex-wrap:wrap;">
       <input type="hidden" name="form-name" value="waitlist">
       <p style="display:none;"><label>Don’t fill <input name="bot-field"></label></p>
       <input type="email" id="email" name="email" placeholder="you@email.com" required style="max-width:280px;">
-      <button class="btn" type="submit">Save locally</button>
+      <button class="btn" type="submit">Join waitlist</button>
     </form>
-    <p class="ok" id="wlok">Saved in this browser only.</p>
+    <p class="ok" id="wlok">Saved locally. If Netlify Forms is live, the same email is posted to the site inbox.</p>
   </section>
   <footer>
     <p>MVP. No payments live. Cash collected: $0. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
@@ -62,11 +63,10 @@
     const s = SHG.stats();
     document.getElementById("stats").textContent =
       s.requests + " requests · " + s.providers + " providers · " + s.quotes + " quotes · " + s.pipeline + " pipeline rows · " + s.waitlist + " waitlist emails";
-    document.getElementById("wl").onsubmit = function (e) {
-      e.preventDefault();
-      SHG.addWaitlist(document.getElementById("email").value);
+    document.getElementById("wl").addEventListener("submit", function () {
+      try { SHG.addWaitlist(document.getElementById("email").value); } catch (e) {}
       document.getElementById("wlok").style.display = "block";
-    };
+    });
   </script>
 </body>
 </html>
