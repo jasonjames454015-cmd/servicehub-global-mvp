@@ -1,22 +1,25 @@
 # Lagos / Nigeria real-estate desk notes (compliance-first)
 
-Date: 2026-09-27
+Date: 2026-09-28
 Status: public-source briefing only. Not brokerage, not investment advice, not a title search, not escrow. Do not hold client funds. Listing sites are not official comps.
 
 ## Official rails (use these first)
 - NBS home: https://nigerianstat.gov.ng/
-- NBS GDP catalog (official Q2 2026 ZIP): https://microdata.nigerianstat.gov.ng/index.php/catalog/147/related-materials
+- NBS GDP catalog (Q1 and Q2 2026 ZIPs listed): https://microdata.nigerianstat.gov.ng/index.php/catalog/147/related-materials
+- Q2 2026 GDP ZIP (catalog date 2026-08-31): https://microdata.nigerianstat.gov.ng/index.php/catalog/147/download/1433
 - Lagos Land Administration / e-GIS: https://landonline.lagosstate.gov.ng/
 - Lagos housing and lands: https://lagosstate.gov.ng/services/housingandlands
 
-## NBS headline figures (re-check the official ZIP/PDF before any paid memo)
-From NBS site as of 2026-09-27:
+## NBS headline figures (homepage snapshot 2026-09-28)
+From https://nigerianstat.gov.ng/ as of this date (not a substitute for the official PDF):
 - Real GDP +3.89% y/y in Q1 2026 (vs +3.13% in Q1 2025).
 - Construction share of real GDP 4.85% in Q1 2026 (vs 4.74% a year earlier).
+- Manufacturing real growth +3.29% y/y in Q1 2026.
+- Trade real growth +2.08% y/y in Q1 2026.
 - Non-oil share of real GDP 96.08% in Q1 2026.
-- Headline CPI (all-items, 2024=100) shown on the NBS homepage at 15.39% at last snapshot; treat as a live ticker, not a locked print.
+- Oil sector real growth +2.57% y/y in Q1 2026.
 
-Press citing the NBS Q2 2026 release (31 Aug–2 Sep 2026): real GDP +4.43% y/y; real estate services about +3.76% real; construction about +6.75% y/y; real estate share of real GDP cited near 12.7% in some breakdowns. Open the official file before quoting those Q2 numbers in a paid brief.
+Q2 2026 official ZIP exists in the NBS microdata catalog (author NBS, dated 2026-08-31). This session did not unpack that ZIP into the repo. Do not paste press Q2 percentages into a paid brief until the PDF/XLSX inside the ZIP is opened.
 
 ## Housing stock / deficit (attributed, not independently audited here)
 Federal Ministry of Housing and Urban Development / National Housing Data Technical Committee figures repeated in 2026 briefings and news:

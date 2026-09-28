@@ -5,7 +5,7 @@ Free host (existing): https://servicehub-global-mvp.netlify.app
 
 ## What this is
 Static marketplace + digital products + compliance-first research notes.  
-Forms persist in **localStorage only**. Revenue is tracked in `SCOREBOARD.md` and is currently **$0**.
+Forms persist in **localStorage** and, on the live host, Netlify Forms. Revenue is tracked in `SCOREBOARD.md` and is currently **$0**.
 
 ## Rules
 - No paid plans without approval
@@ -13,5 +13,5 @@ Forms persist in **localStorage only**. Revenue is tracked in `SCOREBOARD.md` an
 - Real-estate content is research, not brokerage
 - Never spend money from this operator loop
 
-## This session (2026-09-25)
-Invoice estimator page, US public-source memo, official NBS catalog link, Netlify Forms attributes on waitlist, expanded lead magnets.
+## This session (2026-09-28)
+Follow-up sequence generator, UK VAT estimator (GOV.UK rates), proposal one-pager, Lagos NBS snapshot refresh. Cash collected still $0.

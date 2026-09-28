@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-day follow-up generator – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav>
+      <a href="quote.html">Quote</a>
+      <a href="products.html">Products</a>
+      <a href="vat.html">VAT</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <p class="badge">Free tool · copy-paste · $0</p>
+    <h1>7-day follow-up generator</h1>
+    <p class="muted">Build a sequence after you send a quote. Nothing here is a booked job. Install this system for a shop for $250–$750 only after a written yes.</p>
+    <div class="card">
+      <label>Your name / shop</label>
+      <input id="from" placeholder="Amina — Bright Fix Ltd">
+      <label>Customer first name</label>
+      <input id="to" placeholder="James">
+      <label>Job in one line</label>
+      <input id="job" placeholder="Kitchen tap + waste replacement">
+      <label>Quote amount (optional)</label>
+      <input id="amt" placeholder="185">
+      <label>Currency</label>
+      <select id="cur"><option>GBP</option><option>NGN</option><option>USD</option><option>EUR</option></select>
+      <button class="btn" type="button" onclick="gen()" style="margin-top:1rem;">Generate sequence</button>
+    </div>
+    <pre id="out" class="card" style="white-space:pre-wrap;display:none;margin-top:1.2rem;"></pre>
+    <button class="btn btn-outline" type="button" id="copybtn" style="display:none;margin-top:.8rem;" onclick="copyOut()">Copy all</button>
+  </main>
+  <script>
+    function money() {
+      var a = document.getElementById('amt').value.trim();
+      var c = document.getElementById('cur').value;
+      return a ? (c + ' ' + a) : 'the quoted amount';
+    }
+    function gen() {
+      var from = document.getElementById('from').value.trim() || 'our shop';
+      var to = document.getElementById('to').value.trim() || 'there';
+      var job = document.getElementById('job').value.trim() || 'the work we quoted';
+      var m = money();
+      var text =
+        'DAY 0 — send with the quote\nHi ' + to + ', here is the written quote for ' + job + ' at ' + m + '. Scope and exclusions are on the page. Reply YES to book or ASK if something is missing. — ' + from + '\n\n' +
+        'DAY 2 — short nudge\nHi ' + to + ', checking you received the quote for ' + job + '. Still happy to hold that price this week if you want the slot. — ' + from + '\n\n' +
+        'DAY 4 — objection check\nHi ' + to + ', if the quote for ' + job + ' is sitting because of timing or scope, say so and I will reshape it. No pressure. — ' + from + '\n\n' +
+        'DAY 7 — close or park\nHi ' + to + ', last note on ' + job + ' at ' + m + '. Reply BOOK, LATER, or NO and I will stop chasing. — ' + from + '\n\n' +
+        'Rules: do not invent urgency. Do not claim a deposit until they agree in writing. This text is a template, not legal advice.';
+      var el = document.getElementById('out');
+      el.style.display = 'block';
+      el.textContent = text;
+      document.getElementById('copybtn').style.display = 'inline-block';
+    }
+    function copyOut() {
+      var t = document.getElementById('out').textContent;
+      if (navigator.clipboard) navigator.clipboard.writeText(t);
+    }
+  </script>
+</body>
+</html>
