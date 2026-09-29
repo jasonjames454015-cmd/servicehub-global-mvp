@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope of work generator – ServiceHub Global</title>
+  <meta name="description" content="Write a fixed-scope yes/no page for a trades or admin job. Not a contract.">
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav>
+      <a href="quote.html">Quote</a>
+      <a href="followup.html">Follow-up</a>
+      <a href="invoice.html">Invoice</a>
+      <a href="products.html">Products</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <p class="badge">$0 tool · not a contract · not a sale</p>
+    <h1>Scope of work generator</h1>
+    <p class="muted">Fill the boxes. Copy the text. Send only after you can actually do the work this week.</p>
+    <div class="card">
+      <label>Client name<br><input id="client" value="" placeholder="Alex"></label><br><br>
+      <label>Trade / offer<br><input id="trade" value="one-page site + WhatsApp button"></label><br><br>
+      <label>Included (one line each)<br><textarea id="inc" rows="4">Homepage with hours, service list, WhatsApp button
+Mobile layout check
+One round of copy edits</textarea></label><br><br>
+      <label>Excluded<br><textarea id="exc" rows="3">Paid ads
+Booking calendar integration
+Photography</textarea></label><br><br>
+      <label>Price band (state it is a quote)<br><input id="price" value="$250–$450 after written yes"></label><br><br>
+      <label>Turnaround<br><input id="days" value="5 working days after deposit"></label><br><br>
+      <button class="btn" type="button" id="go">Generate</button>
+    </div>
+    <div class="card" style="margin-top:1rem;">
+      <h2 style="margin-top:0;">Copy this</h2>
+      <pre id="out" style="white-space:pre-wrap;font-family:inherit;"></pre>
+      <button class="btn btn-outline" type="button" id="copy">Copy</button>
+    </div>
+    <p class="note">This is a draft. A licensed professional must review anything that looks like a contract, tax, or property instrument.</p>
+  </main>
+  <script>
+    function build() {
+      const c = document.getElementById('client').value.trim() || 'Client';
+      const t = document.getElementById('trade').value.trim();
+      const inc = document.getElementById('inc').value.trim();
+      const exc = document.getElementById('exc').value.trim();
+      const p = document.getElementById('price').value.trim();
+      const d = document.getElementById('days').value.trim();
+      return 'SCOPE (draft, not a contract)\n\nFor: ' + c + '\nOffer: ' + t + '\n\nIncluded:\n- ' +
+        inc.split(/\n+/).filter(Boolean).join('\n- ') +
+        '\n\nNot included:\n- ' + exc.split(/\n+/).filter(Boolean).join('\n- ') +
+        '\n\nQuoted range: ' + p +
+        '\nTiming: ' + d +
+        '\n\nNo work starts and no invoice is due until you reply YES in writing.\nPayment terms are agreed only after that yes.\nCash collected today: $0 unless a receipt exists.';
+    }
+    document.getElementById('go').onclick = function () {
+      document.getElementById('out').textContent = build();
+    };
+    document.getElementById('copy').onclick = function () {
+      const t = document.getElementById('out').textContent;
+      if (t && navigator.clipboard) navigator.clipboard.writeText(t);
+    };
+    document.getElementById('go').click();
+  </script>
+</body>
+</html>
