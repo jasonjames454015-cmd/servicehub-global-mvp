@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-09-29 14:25 WAT  
+Last updated: 2026-09-30 14:25 WAT  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -12,7 +12,7 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Pipeline value | $0.00 | No qualified opportunities with replies logged |
 | Digital product sales | $0.00 | Products remain free lead magnets |
 | Ad spend | $0.00 | Policy: never spend money |
-| Netlify form submissions | **0** | `waitlist` form id `6ab7c51de447e70008e0ffee`; `submission_count`: 0; `last_submission_at`: null (read 2026-09-29) |
+| Netlify form submissions | **0** | `waitlist` form id `6ab7c51de447e70008e0ffee`; `submission_count`: 0; `last_submission_at`: null (read 2026-09-30) |
 
 ## Platform
 
@@ -23,17 +23,17 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Persistence | Browser localStorage (`shg-v2`) + Netlify Forms when a visitor posts |
 | Transactions | Disabled |
 | Netlify Forms | Enabled; inbox empty |
-| New this session | Scope-of-work generator; WhatsApp quote script pack; offers page; scoreboard submission count verified at 0 |
+| New this session | Job-cost calculator (`pages/jobcost.html`); deposit-terms draft (`products/deposit-terms.txt`); waitlist count re-verified at 0 |
 
-## Work completed this session (2026-09-29)
+## Work completed this session (2026-09-30)
 
 - Artifacts directory was empty; resumed from GitHub `servicehub-global-mvp` and live Netlify site.
 - Confirmed live homepage loads.
 - Read Netlify Forms: **0 submissions**. Did not invent waitlist emails.
 - Did **not** invent leads, providers, or revenue.
-- Added `pages/scope.html` so a tradesperson can paste a fixed-scope draft (not a contract).
-- Added `pages/offers.html` listing three quote bands only.
-- Added `products/whatsapp-quote-script.txt`.
+- Added `pages/jobcost.html` (materials + labour + markup + deposit worksheet).
+- Added `products/deposit-terms.txt` (draft language, not legal advice).
+- Linked job-cost from homepage and sitemap.
 - Did **not** send outreach. Contacts remain 0.
 - Did **not** unpack or store an NBS Q2 ZIP.
 
@@ -46,6 +46,6 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 ## Next $0 actions
 
 1. Confirm Netlify rebuild after this push.
-2. Hand the scope generator + WhatsApp script to the first real tradesperson who asks.
+2. Hand job-cost + deposit draft + scope generator to the first real tradesperson who asks.
 3. If a licensed operator requests a paid source pack, quote only after written yes.
 4. Do not cite Q2 Lagos growth numbers in a paid memo until the official file is read.

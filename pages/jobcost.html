@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job cost calculator – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="quote.html">Quote</a><a href="scope.html">Scope</a><a href="offers.html">Offers</a></nav>
+  </header>
+  <main class="wrap">
+    <p class="badge">Estimator only · not a contract · $0 collected</p>
+    <h1>Job cost calculator</h1>
+    <p class="muted">Add materials, labour hours, and a markup. Copy the summary into a quote. This is a worksheet, not tax, insurance, or legal advice.</p>
+    <div class="grid">
+      <div class="card">
+        <label>Materials (currency units)</label>
+        <input id="mat" type="number" min="0" step="0.01" value="0">
+        <label>Labour hours</label>
+        <input id="hrs" type="number" min="0" step="0.25" value="4">
+        <label>Hourly rate</label>
+        <input id="rate" type="number" min="0" step="0.01" value="35">
+        <label>Markup %</label>
+        <input id="mk" type="number" min="0" step="1" value="20">
+        <label>Deposit %</label>
+        <input id="dep" type="number" min="0" max="100" step="1" value="30">
+        <button class="btn" type="button" id="go" style="margin-top:1rem;">Calculate</button>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0;">Summary</h2>
+        <pre id="out" style="white-space:pre-wrap;font:inherit;">Press Calculate.</pre>
+        <button class="btn btn-outline" type="button" id="copy">Copy summary</button>
+        <p class="note">Use with the quote and scope tools. Collect only after a written yes.</p>
+      </div>
+    </div>
+  </main>
+  <script>
+    function money(n){ return (Math.round(n*100)/100).toFixed(2); }
+    function calc(){
+      var mat = +document.getElementById('mat').value || 0;
+      var hrs = +document.getElementById('hrs').value || 0;
+      var rate = +document.getElementById('rate').value || 0;
+      var mk = +document.getElementById('mk').value || 0;
+      var dep = +document.getElementById('dep').value || 0;
+      var labour = hrs * rate;
+      var cost = mat + labour;
+      var price = cost * (1 + mk/100);
+      var deposit = price * (dep/100);
+      var text =
+        'JOB COST WORKSHEET (not a contract)\n' +
+        'Materials: ' + money(mat) + '\n' +
+        'Labour: ' + hrs + ' h × ' + money(rate) + ' = ' + money(labour) + '\n' +
+        'Cost before markup: ' + money(cost) + '\n' +
+        'Markup ' + mk + '% → quoted price: ' + money(price) + '\n' +
+        'Suggested deposit ' + dep + '%: ' + money(deposit) + '\n' +
+        'Balance on completion: ' + money(price - deposit) + '\n' +
+        'Confirm scope, materials, and dates in writing before work starts.';
+      document.getElementById('out').textContent = text;
+    }
+    document.getElementById('go').onclick = calc;
+    document.getElementById('copy').onclick = function(){
+      var t = document.getElementById('out').textContent;
+      if (navigator.clipboard) navigator.clipboard.writeText(t);
+    };
+  </script>
+</body>
+</html>
