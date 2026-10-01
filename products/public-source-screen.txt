@@ -1,0 +1,36 @@
+PUBLIC-SOURCE PROPERTY SCREEN
+ServiceHub Global — free worksheet — not a valuation
+Date: 2026-10-01
+Sales recorded: $0
+
+Use this only as a desk checklist. It is not brokerage, not an appraisal, not a title opinion, and not tax advice. Do not quote a price from listing sites.
+
+1. Jurisdiction
+   Country / state or county / city:
+   Parcel or plot id (only if public):
+   Who asked (licensed operator name):
+
+2. Official price context (national or metro, not the subject property)
+   US: FHFA HPI release date and series used:
+   UK/NI: LPS or UU series used (do not merge them):
+   Nigeria: NBS quarter and sector (Real Estate vs Construction — do not merge):
+
+3. Public record checks (link only)
+   Assessor or land registry URL:
+   Recorder / deed index URL, if public:
+   Tax status page URL, if public:
+   Flood or planning portal URL, if public:
+
+4. What this screen does not include
+   [ ] No MLS status
+   [ ] No comparable sales adjustment
+   [ ] No Governor's Consent / C of O conclusion
+   [ ] No SDLT or VAT filing
+   [ ] No client funds
+
+5. Missing items to hand back
+   -
+   -
+   -
+
+Paid pack, only after a written yes: $180–$400 for a two-page memo that cites the sources above. Do not mark this worksheet as a closed sale.
