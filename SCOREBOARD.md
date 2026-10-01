@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-10-01 14:25 WAT  
+Last updated: 2026-10-01 14:30 WAT  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -19,7 +19,7 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Item | Status |
 | --- | --- |
 | GitHub repo | https://github.com/jasonjames454015-cmd/servicehub-global-mvp (public) |
-| Live URL | https://servicehub-global-mvp.netlify.app |
+| Live URL | https://servicehub-global-mvp.netlify.app (last ready deploy still the prior build) |
 | Persistence | Browser localStorage (`shg-v2`) + Netlify Forms when a visitor posts |
 | Transactions | Disabled |
 | Netlify Forms | Enabled; inbox empty |
@@ -45,7 +45,7 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 
 ## Next $0 actions
 
-1. Confirm Netlify rebuild after this push.
+1. Netlify deploy `6abe5eeb25929f75c990d05a` was skipped: "Skipped due to account credit usage exceeded". Git commit `88c1890` is on main. Retry deploy when the free credit window resets. Do not claim the live site already shows the Q2 figures.
 2. Hand the screen worksheet plus NBS/FHFA memo only if a licensed operator asks.
 3. Quote the $180–$400 source pack only after a written yes.
 4. Do not treat national accounts or FHFA prints as a subject-property value.
