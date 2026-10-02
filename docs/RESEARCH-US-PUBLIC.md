@@ -1,9 +1,9 @@
 # US real-estate public-source desk (compliance-first)
 
-Date: 2026-10-01
+Date: 2026-10-02
 Status: research pointers only. Not an MLS, not brokerage, not a CMA, not an appraisal, and not a title search. Do not steer buyers. Do not hold client funds.
 
-## Official release read this session
+## Official release read 2026-10-01
 FHFA news release, 29 September 2026:
 https://www.fhfa.gov/news/news-release/fhfa-house-price-index-up-0.3-percent-in-july-up-2.6-percent-from-last-year
 
@@ -22,8 +22,16 @@ Source page: https://www.fhfa.gov/ (spotlight table dated with the 25 August 202
 
 Do not merge the monthly July print with the quarterly Q2 print into one “the market is up X” sentence.
 
+## FRED national medians read 2026-10-02
+These are three different series. Do not average them. Do not treat any of them as a subject-property value. Worksheet: `products/price-screen-fred.txt`.
+
+- Realtor.com via FRED, MEDLISPRIUS, median listing price, not seasonally adjusted. Sep 2026: $419,250. Aug: $424,500. Jul: $428,950. Jun: $430,000. May: $429,500. Page updated 1 Oct 2026. https://fred.stlouisfed.org/series/MEDLISPRIUS
+- NAR via FRED, HOSMEDUSM052N, median sales price of existing homes, not seasonally adjusted. Aug 2026: $429,100. Jul: $436,400. Jun: $442,800. May: $431,200. Apr: $417,500. Page updated 10 Sep 2026. Next release listed 13 Oct 2026. Cite NAR and FRED. https://fred.stlouisfed.org/series/HOSMEDUSM052N
+- Census and HUD via FRED, MSPNHSUS, median sales price for new houses sold, not seasonally adjusted. Aug 2026: $393,700. Jul: $392,200. Jun: $406,400. May: $414,300. Apr: $415,700. Page updated 24 Sep 2026. https://fred.stlouisfed.org/series/MSPNHSUS
+
 ## Free official / public sources
 - FHFA HPI downloads: https://www.fhfa.gov/data/hpi
+- FRED housing series above
 - Census ACS / AHS: https://data.census.gov
 - County assessor + recorder: search "[county] assessor" and "[county] recorder"
 - County / city GIS parcels when the county publishes them
@@ -37,4 +45,4 @@ Live MLS status, a title plant, a licensed appraisal, or permission to scrape co
 Housing-related pages must be available without regard to protected class. Do not add steering language, school-rating sales copy, or “good neighborhood” filters.
 
 ## Paid offer (only after a written yes)
-One-market public-source screen for a licensed operator: FHFA metro/state print + assessor URL + what is still missing (taxes, flood, HOA, title). Quote band $180–$400. Zero sales recorded as of 2026-10-01.
+One-market public-source screen for a licensed operator: FHFA metro/state print + FRED national context + assessor URL + what is still missing (taxes, flood, HOA, title). Quote band $180–$400. Zero sales recorded as of 2026-10-02.
