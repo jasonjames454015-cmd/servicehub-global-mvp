@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change order – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="scope.html">Scope</a><a href="quote.html">Quote</a><a href="products.html">Products</a></nav>
+  </header>
+  <main class="wrap">
+    <h1>Change order</h1>
+    <p class="warn">Draft only. Not a contract and not a closed job. Work starts after a written yes on the delta, not when this page loads.</p>
+    <form id="co">
+      <label>Job reference</label>
+      <input id="ref" placeholder="JOB-014">
+      <label>Original scope title</label>
+      <input id="scope" placeholder="One-page site">
+      <label>What is added</label>
+      <textarea id="add" placeholder="Second revision round"></textarea>
+      <label>What is removed</label>
+      <textarea id="rem" placeholder="Nothing"></textarea>
+      <label>Price delta</label>
+      <input id="price" placeholder="150 USD">
+      <label>Extra days</label>
+      <input id="days" placeholder="3">
+      <button class="btn" type="submit">Write the draft</button>
+    </form>
+    <pre id="out" class="card" style="white-space:pre-wrap;margin-top:1rem;display:none;"></pre>
+    <p class="note">Nothing is sent. Copy the draft into email or WhatsApp yourself. A blank download is not an order.</p>
+    <p><a href="../products/change-order.txt" download>Download the blank</a></p>
+  </main>
+  <script>
+    document.getElementById("co").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = function (id) { return document.getElementById(id).value.trim() || "________"; };
+      var text = [
+        "CHANGE ORDER DRAFT — not a contract",
+        "Job reference: " + v("ref"),
+        "Original scope: " + v("scope"),
+        "Add: " + v("add"),
+        "Remove: " + v("rem"),
+        "Price delta: " + v("price"),
+        "Extra days: " + v("days"),
+        "Work on this change starts only after both sides write yes.",
+        "A page load is not acceptance."
+      ].join("\n");
+      var out = document.getElementById("out");
+      out.textContent = text;
+      out.style.display = "block";
+    });
+  </script>
+</body>
+</html>

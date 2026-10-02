@@ -1,0 +1,47 @@
+# US public price screen — 2 Oct 2026
+
+Not an appraisal. Not an MLS median for a subject property. Do not merge these series.
+
+Read from FRED (St. Louis Fed) on 2 Oct 2026. Sources are the agencies named on each series page.
+
+1) Realtor.com via FRED, MEDLISPRIUS
+   Housing inventory median listing price, United States, not seasonally adjusted.
+   https://fred.stlouisfed.org/series/MEDLISPRIUS
+   Sep 2026: 419,250
+   Aug 2026: 424,500
+   Jul 2026: 428,950
+   Jun 2026: 430,000
+   May 2026: 429,500
+   Page updated 1 Oct 2026. Next release listed 5 Nov 2026.
+   This is a listing median, not a closed-sale median.
+
+2) National Association of Realtors via FRED, HOSMEDUSM052N
+   Median sales price of existing homes, not seasonally adjusted.
+   https://fred.stlouisfed.org/series/HOSMEDUSM052N
+   Aug 2026: 429,100
+   Jul 2026: 436,400
+   Jun 2026: 442,800
+   May 2026: 431,200
+   Apr 2026: 417,500
+   Page updated 10 Sep 2026. Next release listed 13 Oct 2026.
+   NAR copyright; reprinted on FRED with permission. Cite NAR and FRED. Do not republish the series as your own.
+
+3) Census Bureau and HUD via FRED, MSPNHSUS
+   Median sales price for new houses sold, United States, not seasonally adjusted.
+   https://fred.stlouisfed.org/series/MSPNHSUS
+   Aug 2026: 393,700
+   Jul 2026: 392,200
+   Jun 2026: 406,400
+   May 2026: 414,300
+   Apr 2026: 415,700
+   Page updated 24 Sep 2026. Next release listed 27 Oct 2026.
+
+What this screen is not
+- Not a county assessor print.
+- Not a flood, tax, HOA, or title check.
+- Not permission to scrape listing sites.
+- Not a reason to tell a buyer a house is “cheap” or “expensive.”
+
+Paid offer (only after a written yes)
+Attach this national screen to one county assessor URL and list what is still missing.
+Quote band remains 180–400 USD. Sales recorded: 0.
