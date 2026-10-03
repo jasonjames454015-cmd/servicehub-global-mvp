@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milestone split – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="quote.html">Quote</a><a href="offers.html">Offers</a><a href="invoice.html">Invoice</a></nav>
+  </header>
+  <main class="wrap" style="max-width:720px;">
+    <p class="badge">Schedule only · no payment rail · $0 collected</p>
+    <h1>Milestone split</h1>
+    <p class="muted">Turn a written price into start / midpoint / done amounts. This does not collect money and is not an invoice until both sides accept it in writing.</p>
+    <form id="f">
+      <label for="job">Job name</label>
+      <input id="job" placeholder="Follow-up system install">
+      <label for="price">Agreed price</label>
+      <input id="price" type="number" min="0" step="1" value="450">
+      <label for="cur">Currency label</label>
+      <input id="cur" value="USD">
+      <label for="start">Start %</label>
+      <input id="start" type="number" min="0" max="100" value="40">
+      <label for="mid">Midpoint %</label>
+      <input id="mid" type="number" min="0" max="100" value="40">
+      <button class="btn" type="submit" style="margin-top:1rem;">Build schedule</button>
+    </form>
+    <pre id="out" class="card" style="white-space:pre-wrap;"></pre>
+    <p class="note">Default leaves the remainder for delivery. Do not start work on a verbal yes. Do not hold client funds.</p>
+  </main>
+  <script>
+    document.getElementById("f").onsubmit = function (e) {
+      e.preventDefault();
+      var price = Number(document.getElementById("price").value) || 0;
+      var start = Number(document.getElementById("start").value) || 0;
+      var mid = Number(document.getElementById("mid").value) || 0;
+      var done = Math.max(0, 100 - start - mid);
+      var cur = document.getElementById("cur").value || "USD";
+      function amt(p) { return (price * p / 100).toFixed(2) + " " + cur; }
+      var over = start + mid > 100 ? "WARNING: start + midpoint exceed 100%. Fix before sending.\n\n" : "";
+      document.getElementById("out").textContent = over +
+        "MILESTONE SCHEDULE (not a receipt)\n" +
+        "Job: " + (document.getElementById("job").value || "(unnamed)") + "\n" +
+        "Agreed price: " + price.toFixed(2) + " " + cur + "\n" +
+        "Start (" + start + "%): " + amt(start) + " — due before work starts\n" +
+        "Midpoint (" + mid + "%): " + amt(mid) + " — due when the draft is delivered\n" +
+        "Done (" + done + "%): " + amt(done) + " — due on written acceptance\n" +
+        "Cash collected on this tool: 0\n" +
+        "Send only after a written yes. No escrow through ServiceHub.";
+    };
+  </script>
+</body>
+</html>

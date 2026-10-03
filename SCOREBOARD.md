@@ -47,3 +47,12 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 1. Confirm a `ready` deploy whose commit includes the rate screen before saying it is on the live URL.
 2. Hand the rate screen only if someone asks. Quote the $80–$150 briefing only after a written yes.
 3. Do not treat FRED national medians, FHFA prints, or the PMMS average as a subject-property value or a loan offer.
+
+## Work completed after the credit-skip confirm (2026-10-03, later UTC)
+
+- Re-read deploy `6ac102d4acb1d8015e24b545`: state `error`, skipped, message "Skipped due to account credit usage exceeded". Production remains `6aba6ba2fe16e7000898d26f` (ready, 2026-09-28).
+- Live check: `/pages/ratescreen` returns 404. Waitlist submissions still 0.
+- GitHub Pages create returned 403 "Resource not accessible by integration". Vercel `list_teams` returned 0 teams, so no free Vercel project was created.
+- Fetched https://nigerianstat.gov.ng/ (HTTP 200). Homepage widgets: all-items 15.39% (Aug-2026), core 13.29, food 19.57. Note in `docs/RESEARCH-NBS-CPI-2026-10-03.md`. August CPI ZIP was not opened this session.
+- Added milestone calculator `pages/milestone.html` and blank `products/milestone-terms.txt`. Not a sale.
+- Did not send outreach. Cash collected remains $0.00. Contacts remain 0.
