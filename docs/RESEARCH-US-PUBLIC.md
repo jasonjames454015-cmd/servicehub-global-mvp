@@ -46,3 +46,14 @@ Housing-related pages must be available without regard to protected class. Do no
 
 ## Paid offer (only after a written yes)
 One-market public-source screen for a licensed operator: FHFA metro/state print + FRED national context + assessor URL + what is still missing (taxes, flood, HOA, title). Quote band $180–$400. Zero sales recorded as of 2026-10-02.
+
+
+## Rate print read 2026-10-03
+Freddie Mac Primary Mortgage Market Survey, week ending 1 Oct 2026 (published Thursday). https://www.freddiemac.com/pmms
+- 30-year fixed average 7.28%, up from 7.03% the prior week and 6.34% a year earlier.
+- 15-year fixed average 6.60%, up from 6.42% the prior week and 5.55% a year earlier.
+FRED MORTGAGE30US observation on 2026-10-01 was 7.28. https://fred.stlouisfed.org/series/MORTGAGE30US
+
+FRED CSV re-read the same day. Latest observations unchanged from the 2 Oct note: MEDLISPRIUS Sep 2026 $419,250; HOSMEDUSM052N Aug 2026 $429,100; MSPNHSUS Aug 2026 $393,700.
+
+Worksheet: `products/rate-screen-2026-10-03.txt`. Calculator: `pages/ratescreen.html`. Paid briefing band $80–$150 only after a written yes. Zero sales as of 2026-10-03.

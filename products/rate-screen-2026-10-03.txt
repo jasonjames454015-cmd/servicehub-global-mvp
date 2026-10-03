@@ -1,0 +1,27 @@
+ServiceHub Global — rate and payment screen
+Read: 2026-10-03. Not a loan quote. Not an appraisal. Not a subject-property value.
+
+Freddie Mac Primary Mortgage Market Survey, week of 1 Oct 2026
+Source: https://www.freddiemac.com/pmms
+- 30-year fixed average: 7.28% (prior week 7.03%; year-ago 6.34%)
+- 15-year fixed average: 6.60% (prior week 6.42%; year-ago 5.55%)
+FRED series MORTGAGE30US matched 7.28 on 2026-10-01.
+https://fred.stlouisfed.org/series/MORTGAGE30US
+
+National medians, not merged, re-read 2026-10-03 from FRED CSV. Unchanged vs 2 Oct read.
+- MEDLISPRIUS listing median, Sep 2026: $419,250
+- HOSMEDUSM052N existing-home median, Aug 2026: $429,100 (next release listed 13 Oct 2026)
+- MSPNHSUS new-house median, Aug 2026: $393,700
+
+FHFA purchase-only HPI, release 29 Sep 2026 (July data): +0.3% m/m, +2.6% y/y.
+https://www.fhfa.gov/reports/house-price-index/2026/9
+
+Illustrative principal-and-interest only, 30-year, 7.28%, no taxes, insurance, or fees.
+Formula: M = P * r(1+r)^n / ((1+r)^n - 1), r = 0.0728/12, n = 360.
+- $300,000 principal: about $2,052 / month
+- $400,000 principal: about $2,736 / month
+- $419,250 principal (Sep listing median, not a loan amount): about $2,867 / month
+
+Do not present this as a lender offer. A real payment needs the borrower's rate, points, taxes, insurance, and HOA.
+
+Paid offer only after a written yes: one-page rate-and-median screen for a named market, $80–$150. Zero sales as of this file.

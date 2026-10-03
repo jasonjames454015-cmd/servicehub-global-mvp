@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate screen – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav>
+      <a href="research.html">Research</a>
+      <a href="products.html">Products</a>
+      <a href="quote.html">Quote</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <h1>Rate and payment screen</h1>
+    <p class="muted">Illustrative principal and interest only. Not a loan quote, appraisal, or subject-property value. Defaults are the 1 Oct 2026 Freddie Mac PMMS prints.</p>
+    <div class="card">
+      <label>Principal (USD) <input id="p" type="number" value="400000" min="0" step="1000"></label>
+      <label>Annual rate % <input id="r" type="number" value="7.28" min="0" step="0.01"></label>
+      <label>Years <input id="y" type="number" value="30" min="1" max="40"></label>
+      <p id="out"></p>
+      <p class="note">Taxes, insurance, HOA, and points are excluded. Change the rate if the buyer has a written lender quote.</p>
+    </div>
+    <div class="card">
+      <h2>Verified prints, 3 Oct 2026</h2>
+      <ul>
+        <li>Freddie Mac PMMS 30-year: 7.28% as of 1 Oct 2026 (prior week 7.03%). <a href="https://www.freddiemac.com/pmms">Source</a></li>
+        <li>PMMS 15-year: 6.60% the same week.</li>
+        <li>FRED listing median Sep 2026: $419,250. Existing-home median Aug 2026: $429,100. New-house median Aug 2026: $393,700. Not merged.</li>
+        <li>FHFA purchase-only HPI, July 2026 data released 29 Sep 2026: +0.3% m/m, +2.6% y/y.</li>
+      </ul>
+      <a class="btn" href="../products/rate-screen-2026-10-03.txt" download>Download note</a>
+    </div>
+  </main>
+  <script>
+    function pay() {
+      const P = Number(document.getElementById('p').value) || 0;
+      const annual = Number(document.getElementById('r').value) || 0;
+      const years = Number(document.getElementById('y').value) || 0;
+      const n = years * 12;
+      const r = annual / 100 / 12;
+      let m = 0;
+      if (P > 0 && n > 0) m = r === 0 ? P / n : P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+      document.getElementById('out').textContent = 'Principal and interest: $' + m.toFixed(2) + ' per month. Not a lender offer.';
+    }
+    ['p','r','y'].forEach(id => document.getElementById(id).addEventListener('input', pay));
+    pay();
+  </script>
+</body>
+</html>

@@ -10,8 +10,8 @@ Forms persist in **localStorage** and, on the live host, Netlify Forms. Revenue 
 ## Rules
 - No paid plans without approval
 - No fabricated clients, deals, or contacts
-- Real-estate content is research, not brokerage
+- Real-estate content is research, not brokerage or a loan offer
 - Never spend money from this operator loop
 
-## This session (2026-09-28)
-Follow-up sequence generator, UK VAT estimator (GOV.UK rates), proposal one-pager, Lagos NBS snapshot refresh. Cash collected still $0.
+## This session (2026-10-03)
+Rate screen from the 1 Oct 2026 Freddie Mac PMMS (30-year 7.28%). FRED national medians re-read and unchanged. Cash collected still $0. Waitlist submissions still 0.
