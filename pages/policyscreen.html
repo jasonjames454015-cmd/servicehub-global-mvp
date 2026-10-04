@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy rate screen – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="research.html">Research</a><a href="ratescreen.html">US rates</a><a href="products.html">Products</a></nav>
+  </header>
+  <main class="wrap" style="max-width:760px;">
+    <p class="badge">Read 4 Oct 2026 · not a loan offer · $0 collected</p>
+    <h1>Policy rate screen</h1>
+    <p class="muted">Three official prints, kept separate. None of these is a rate a named client can lock, and none is a property value.</p>
+    <div class="warn">US PMMS 7.28% is the 1 Oct 2026 weekly average. BoE Bank Rate 3.75% is the 17 Sep 2026 hold. CBN MPR 23% is Communique 164 on 22 Sep 2026. Do not blend them.</div>
+    <form id="f">
+      <label for="market">Market note</label>
+      <select id="market">
+        <option value="us">United States — PMMS 7.28% (1 Oct 2026)</option>
+        <option value="uk">United Kingdom — Bank Rate 3.75% (17 Sep 2026)</option>
+        <option value="ng">Nigeria — MPR 23.00% (22 Sep 2026)</option>
+      </select>
+      <label for="price">Subject price (local currency, optional)</label>
+      <input id="price" type="number" min="0" step="1" placeholder="Leave blank if you have no asking price">
+      <button class="btn" type="submit" style="margin-top:1rem;">Write the screen</button>
+    </form>
+    <pre id="out" class="card" style="white-space:pre-wrap;"></pre>
+    <p class="note">Sources: freddiemac.com/pmms, FRED MORTGAGE30US, bankofengland.co.uk interest-rate page, cbn.gov.ng Monetary Policy decisions and Communique 164. Briefing band $80–$150 only after a written yes.</p>
+  </main>
+  <script>
+    var notes = {
+      us: "US screen\nFreddie Mac PMMS as of 1 Oct 2026: 30-year 7.28% (prior week 7.03%; year ago 6.34%). 15-year 6.60% (prior 6.42%; year ago 5.55%).\nScope: conventional conforming purchase, 20% down, excellent credit.\nFRED MORTGAGE30US 2026-10-01: 7.28.\nNext Thursday print after this note: 8 Oct 2026. Not checked in after that date.\nThis is not a lock and not a subject-property value.",
+      uk: "UK screen\nBank Rate held at 3.75% (meeting ending 16 Sep 2026, published 17 Sep 2026).\nVote 6–3 to hold; three members preferred 4%.\nBoE page: inflation 3.1%, target 2%. Next decision listed 5 Nov 2026.\nNot a mortgage product rate. Not SDLT. Not a valuation.",
+      ng: "Nigeria screen\nCBN Communique 164, 22 Sep 2026: MPR reset to 23.00%.\nCorridor +50 / −300 basis points. CRR: DMB 45%, merchant banks 16%, non-TSA public sector 75%.\nJuly 2026 decision on the CBN page retained MPR at 26.5%.\nNot a mortgage quote, not a Lagos listing price, not title work."
+    };
+    document.getElementById("f").onsubmit = function (e) {
+      e.preventDefault();
+      var price = document.getElementById("price").value;
+      var line = price ? ("Asking or agreed figure entered: " + price + " (not verified, not a valuation)\n") : "No subject price entered.\n";
+      document.getElementById("out").textContent = notes[document.getElementById("market").value] + "\n" + line + "Cash collected on this tool: 0\nDo not send as a loan offer.";
+    };
+  </script>
+</body>
+</html>

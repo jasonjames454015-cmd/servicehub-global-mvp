@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retainer split – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="quote.html">Quote</a><a href="milestone.html">Milestones</a><a href="invoice.html">Invoice</a></nav>
+  </header>
+  <main class="wrap" style="max-width:720px;">
+    <p class="badge">Ask before work · no payment rail · $0 collected</p>
+    <h1>Retainer split</h1>
+    <p class="muted">Turn a written price into a start amount and a balance. Work does not start on a verbal yes. This page does not take a card.</p>
+    <form id="f">
+      <label for="job">Job name</label>
+      <input id="job" placeholder="Quote pack install">
+      <label for="price">Agreed price</label>
+      <input id="price" type="number" min="0" step="1" value="350">
+      <label for="cur">Currency label</label>
+      <input id="cur" value="USD">
+      <label for="start">Start retainer %</label>
+      <input id="start" type="number" min="0" max="100" value="40">
+      <button class="btn" type="submit" style="margin-top:1rem;">Build retainer note</button>
+    </form>
+    <pre id="out" class="card" style="white-space:pre-wrap;"></pre>
+    <p class="note">Collect outside this site only after a written yes. Extra scope needs a change order. Download the blank at products/retainer-split.txt.</p>
+  </main>
+  <script>
+    document.getElementById("f").onsubmit = function (e) {
+      e.preventDefault();
+      var price = Number(document.getElementById("price").value) || 0;
+      var start = Number(document.getElementById("start").value) || 0;
+      if (start > 100) start = 100;
+      var bal = 100 - start;
+      var cur = document.getElementById("cur").value || "USD";
+      function amt(p) { return (price * p / 100).toFixed(2) + " " + cur; }
+      document.getElementById("out").textContent =
+        "RETAINER NOTE (not a receipt)\n" +
+        "Job: " + (document.getElementById("job").value || "(unnamed)") + "\n" +
+        "Agreed price: " + price.toFixed(2) + " " + cur + "\n" +
+        "Start (" + start + "%): " + amt(start) + " — due before work starts\n" +
+        "Balance (" + bal + "%): " + amt(bal) + " — due on written acceptance\n" +
+        "Work starts only after the start amount is received outside ServiceHub.\n" +
+        "Cash collected on this tool: 0\n" +
+        "No escrow. No card charge. Change orders for extra work.";
+    };
+  </script>
+</body>
+</html>
