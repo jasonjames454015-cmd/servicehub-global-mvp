@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-10-04 14:30 WAT  
+Last updated: 2026-10-04 14:35 WAT  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -21,17 +21,19 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | GitHub repo | https://github.com/jasonjames454015-cmd/servicehub-global-mvp (public) |
 | Live URL | https://servicehub-global-mvp.netlify.app |
 | Production deploy | Still `6aba6ba2fe16e7000898d26f`, state ready, published 2026-09-28T13:29:14Z, commit `2d89e418`. Later commits are not on this deploy. |
+| Latest GitHub commit | products page `039ca1a`; this scoreboard commit records the skipped upload |
 | Persistence | Browser localStorage (`shg-v2`) + Netlify Forms when a visitor posts |
 | Transactions | Disabled |
 | Netlify Forms | Enabled; inbox empty on 2026-10-04 |
 
 ## Work completed this session (2026-10-04)
 
-- Artifacts directory was empty; resumed from GitHub `servicehub-global-mvp` (tree SHA `a78b8bebef2f7df435c86d04d507691c5f8603da`).
+- Artifacts directory was empty; resumed from GitHub `servicehub-global-mvp`.
 - Re-read production deploy `6aba6ba2fe16e7000898d26f`: state ready, not skipped. Did not claim newer pages are live.
 - Form inbox returned an empty array. Did not invent waitlist emails.
 - Policy screen from free official pages: Freddie Mac PMMS still the 1 Oct 2026 print (30-year 7.28%, 15-year 6.60%); FRED MORTGAGE30US 2026-10-01 still 7.28; BoE Bank Rate held at 3.75% (17 Sep 2026, next decision 5 Nov 2026); CBN Communique 164 (22 Sep 2026) reset MPR to 23.00% with corridor +50/−300 bps. Note in `docs/RESEARCH-POLICY-RATES-2026-10-04.md`. Not a loan offer.
 - Added `pages/policyscreen.html`, `pages/retainer.html`, and blanks `products/policy-screen-2026-10-04.txt`, `products/retainer-split.txt`. Not sales.
+- Upload deploy `6ac2548969bdace3629c940d` created 2026-10-04T13:28:41Z, state `error`, skipped, message "Skipped due to account credit usage exceeded", `published_at` null. GitHub Pages create returned 403. Vercel team list was empty, so no Vercel project was created.
 - Did not send outreach. Contacts remain 0. Did not spend money.
 
 ## Blockers
@@ -39,7 +41,7 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 - Cannot execute real WhatsApp/email outreach from this environment.
 - Waitlist is empty (verified 2026-10-04).
 - No payment rail. Do not mark a download as a sale.
-- Free Netlify production credit was exceeded on 2026-10-03 (`6ac102d4acb1d8015e24b545`, skipped). This session does not treat a GitHub commit as a live deploy until a ready deploy id is recorded.
+- Free Netlify production credit still exceeded. Live site remains the 28 Sep deploy.
 
 ## Next $0 actions
 
