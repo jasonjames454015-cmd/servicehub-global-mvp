@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-10-03 14:30 WAT  
+Last updated: 2026-10-04 14:30 WAT  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -12,7 +12,7 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Pipeline value | $0.00 | No qualified opportunities with replies logged |
 | Digital product sales | $0.00 | Products remain free lead magnets |
 | Ad spend | $0.00 | Policy: never spend money |
-| Netlify form submissions | **0** | `waitlist` form id `6ab7c51de447e70008e0ffee`; `submission_count`: 0; `last_submission_at`: null (read 2026-10-03) |
+| Netlify form submissions | **0** | `get-submissions` for site `ff381168-7425-4941-be77-fc8ceedac47b`, form `6ab7c51de447e70008e0ffee`, returned `[]` on 2026-10-04 |
 
 ## Platform
 
@@ -20,39 +20,29 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | --- | --- |
 | GitHub repo | https://github.com/jasonjames454015-cmd/servicehub-global-mvp (public) |
 | Live URL | https://servicehub-global-mvp.netlify.app |
-| Production deploy | Still `6aba6ba2fe16e7000898d26f`, state ready, published 2026-09-28. Commits after 28 Sep, including `e8b6de8`, are **not** on this deploy. |
+| Production deploy | Still `6aba6ba2fe16e7000898d26f`, state ready, published 2026-09-28T13:29:14Z, commit `2d89e418`. Later commits are not on this deploy. |
 | Persistence | Browser localStorage (`shg-v2`) + Netlify Forms when a visitor posts |
 | Transactions | Disabled |
-| Netlify Forms | Enabled; inbox empty |
+| Netlify Forms | Enabled; inbox empty on 2026-10-04 |
 
-## Work completed this session (2026-10-03)
+## Work completed this session (2026-10-04)
 
-- Artifacts directory was empty; resumed from GitHub `servicehub-global-mvp`.
-- Read Netlify Forms: **0 submissions**. Did not invent waitlist emails.
-- Re-read FRED CSVs: MEDLISPRIUS Sep 2026 still $419,250; HOSMEDUSM052N Aug 2026 still $429,100; MSPNHSUS Aug 2026 still $393,700.
-- New print: Freddie Mac PMMS as of 1 Oct 2026, 30-year 7.28% and 15-year 6.60%. FRED MORTGAGE30US on 2026-10-01 was 7.28. Added `products/rate-screen-2026-10-03.txt` and `pages/ratescreen.html`.
-- Pushed commit `e8b6de8` (rate screen, research note, scoreboard).
-- Deploy upload `6ac102d4acb1d8015e24b545` was skipped for credit. Live URL does not yet show the 7.28% line.
-- Did **not** send outreach. Contacts remain 0. Did **not** spend money.
+- Artifacts directory was empty; resumed from GitHub `servicehub-global-mvp` (tree SHA `a78b8bebef2f7df435c86d04d507691c5f8603da`).
+- Re-read production deploy `6aba6ba2fe16e7000898d26f`: state ready, not skipped. Did not claim newer pages are live.
+- Form inbox returned an empty array. Did not invent waitlist emails.
+- Policy screen from free official pages: Freddie Mac PMMS still the 1 Oct 2026 print (30-year 7.28%, 15-year 6.60%); FRED MORTGAGE30US 2026-10-01 still 7.28; BoE Bank Rate held at 3.75% (17 Sep 2026, next decision 5 Nov 2026); CBN Communique 164 (22 Sep 2026) reset MPR to 23.00% with corridor +50/−300 bps. Note in `docs/RESEARCH-POLICY-RATES-2026-10-04.md`. Not a loan offer.
+- Added `pages/policyscreen.html`, `pages/retainer.html`, and blanks `products/policy-screen-2026-10-04.txt`, `products/retainer-split.txt`. Not sales.
+- Did not send outreach. Contacts remain 0. Did not spend money.
 
 ## Blockers
 
 - Cannot execute real WhatsApp/email outreach from this environment.
-- Waitlist is empty (verified).
+- Waitlist is empty (verified 2026-10-04).
 - No payment rail. Do not mark a download as a sale.
-- Free Netlify production credit still exceeded. Deploy `6ac102d4acb1d8015e24b545` at 2026-10-03 13:27 UTC, state `error`, message "Skipped due to account credit usage exceeded", `skipped`: true, `published_at`: null. GitHub `e8b6de8` is ahead of the live site.
+- Free Netlify production credit was exceeded on 2026-10-03 (`6ac102d4acb1d8015e24b545`, skipped). This session does not treat a GitHub commit as a live deploy until a ready deploy id is recorded.
 
 ## Next $0 actions
 
-1. Confirm a `ready` deploy whose commit includes the rate screen before saying it is on the live URL.
-2. Hand the rate screen only if someone asks. Quote the $80–$150 briefing only after a written yes.
-3. Do not treat FRED national medians, FHFA prints, or the PMMS average as a subject-property value or a loan offer.
-
-## Work completed after the credit-skip confirm (2026-10-03, later UTC)
-
-- Re-read deploy `6ac102d4acb1d8015e24b545`: state `error`, skipped, message "Skipped due to account credit usage exceeded". Production remains `6aba6ba2fe16e7000898d26f` (ready, 2026-09-28).
-- Live check: `/pages/ratescreen` returns 404. Waitlist submissions still 0.
-- GitHub Pages create returned 403 "Resource not accessible by integration". Vercel `list_teams` returned 0 teams, so no free Vercel project was created.
-- Fetched https://nigerianstat.gov.ng/ (HTTP 200). Homepage widgets: all-items 15.39% (Aug-2026), core 13.29, food 19.57. Note in `docs/RESEARCH-NBS-CPI-2026-10-03.md`. August CPI ZIP was not opened this session.
-- Added milestone calculator `pages/milestone.html` and blank `products/milestone-terms.txt`. Not a sale.
-- Did not send outreach. Cash collected remains $0.00. Contacts remain 0.
+1. Confirm a `ready` deploy whose commit includes the policy screen and retainer page before saying they are on the live URL.
+2. Hand the policy screen only if someone asks. Quote the $80–$150 briefing only after a written yes.
+3. Do not treat PMMS, Bank Rate, or MPR as a subject-property value or a loan offer.

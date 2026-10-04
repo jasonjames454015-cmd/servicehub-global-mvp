@@ -13,5 +13,5 @@ Forms persist in **localStorage** and, on the live host, Netlify Forms. Revenue 
 - Real-estate content is research, not brokerage or a loan offer
 - Never spend money from this operator loop
 
-## This session (2026-10-03)
-Rate screen from the 1 Oct 2026 Freddie Mac PMMS (30-year 7.28%). FRED national medians re-read and unchanged. Cash collected still $0. Waitlist submissions still 0.
+## This session (2026-10-04)
+Policy screen (PMMS 7.28% as of 1 Oct 2026, BoE Bank Rate 3.75% held 17 Sep 2026, CBN MPR 23% in Communique 164). Retainer split page added. Cash collected still $0. Waitlist submissions still 0. Production deploy still 28 Sep 2026 until a ready deploy is recorded.
