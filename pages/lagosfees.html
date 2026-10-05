@@ -39,8 +39,7 @@
       var ap = (agency / rent) * 100;
       var lp = (legal / rent) * 100;
       var flag = (ap > 10 || lp > 10) ? " Above the 10% line stated on the official pages — ask a licensed practitioner." : " At or under 10% of the rent entered. Still verify LASRERA registration.";
-      document.getElementById("out").textContent = "Agency " + ap.toFixed(1) + "% · agreement/legal " + lp.toFixed(1) + "%.
-" + flag + " Not a ruling.";
+      document.getElementById("out").textContent = "Agency " + ap.toFixed(1) + "% · agreement/legal " + lp.toFixed(1) + "%." + flag + " Not a ruling.";
     });
   </script>
 </body>
