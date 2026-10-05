@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagos fee screen – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="research.html">Research</a><a href="products.html">Products</a><a href="quote.html">Quote</a></nav>
+  </header>
+  <div class="wrap">
+    <h1>Lagos agency and agreement fee screen</h1>
+    <p class="warn">Not legal advice. Not brokerage. Not a fee ruling. Official pages read 5 Oct 2026 only.</p>
+    <div class="card">
+      <p>Lagos State news, 13 May 2025: tenancy agreement / legal fees reaffirmed at a maximum of 10% of annual rent. <a href="https://lagosstate.gov.ng/news/all/view/6825b9ac5e4c9d6ceca455b8">Source</a></p>
+      <p>Lagos State news, 19 June 2025: agency fees stated as between 0% and 10%. Public told to verify LASRERA registration before dealing. <a href="https://lagosstate.gov.ng/news/all/view/685588c05e4c9d6cecaa165a">Source</a></p>
+      <p class="muted">A proposed 5% cap mentioned on non-official blogs is not treated as law here. No gazette page for that bill was read on 5 Oct 2026.</p>
+    </div>
+    <form id="fee" class="card">
+      <label>Annual rent <input id="rent" type="number" min="0" step="1" required></label>
+      <label>Agency fee asked <input id="agency" type="number" min="0" step="1" value="0"></label>
+      <label>Agreement / legal fee asked <input id="legal" type="number" min="0" step="1" value="0"></label>
+      <button class="btn" type="submit">Check against 10%</button>
+      <p id="out" class="note"></p>
+    </form>
+    <p><a class="btn" href="../products/lagos-fee-screen-2026-10-05.txt" download>Download blank</a>
+       <a class="btn btn-outline" href="../docs/RESEARCH-LAGOS-FEES-2026-10-05.md">Open memo</a></p>
+    <p class="muted">Briefing band $80–$150 only after a written yes. Recorded sales: $0.</p>
+  </div>
+  <script>
+    document.getElementById("fee").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var rent = Number(document.getElementById("rent").value);
+      var agency = Number(document.getElementById("agency").value);
+      var legal = Number(document.getElementById("legal").value);
+      if (!rent) { document.getElementById("out").textContent = "Enter annual rent."; return; }
+      var ap = (agency / rent) * 100;
+      var lp = (legal / rent) * 100;
+      var flag = (ap > 10 || lp > 10) ? " Above the 10% line stated on the official pages — ask a licensed practitioner." : " At or under 10% of the rent entered. Still verify LASRERA registration.";
+      document.getElementById("out").textContent = "Agency " + ap.toFixed(1) + "% · agreement/legal " + lp.toFixed(1) + "%.
+" + flag + " Not a ruling.";
+    });
+  </script>
+</body>
+</html>
