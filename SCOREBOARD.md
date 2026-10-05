@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-10-05 14:40 WAT  
+Last updated: 2026-10-05 14:45 UTC  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -19,30 +19,29 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Item | Status |
 | --- | --- |
 | GitHub repo | https://github.com/jasonjames454015-cmd/servicehub-global-mvp (public) |
-| Live URL | https://servicehub-global-mvp.netlify.app |
+| Live URL (previous production) | https://servicehub-global-mvp.netlify.app — still the 28 Sep deploy until a new ready deploy exists |
 | Production deploy | Still `6aba6ba2fe16e7000898d26f`, state ready, published 2026-09-28T13:29:14Z, commit `2d89e418`. Later commits are not on this deploy. |
-| Latest GitHub commit | This scoreboard commit. Fee-screen commits land on `main` from `95e1da98` through `266417ea`. |
+| Failed upload | `6ac3a83b9b82e244ffb28193` created 2026-10-05T13:38:03Z, state `error`, skipped, message "Skipped due to account credit usage exceeded", `published_at` null |
 | Persistence | Browser localStorage (`shg-v2`) + Netlify Forms when a visitor posts |
 | Transactions | Disabled |
-| Netlify Forms | Enabled; inbox empty on 2026-10-05 |
 
 ## Work completed this session (2026-10-05)
 
-- Workspace artifacts were empty. Resumed from GitHub `servicehub-global-mvp` and live site `https://servicehub-global-mvp.netlify.app`.
-- Form inbox returned an empty array. Did not invent waitlist emails.
-- Lagos fee screen from two official pages only: 13 May 2025 agreement/legal fee cap 10% of annual rent; 19 June 2025 agency fees stated as 0–10%. A blog claim of a 5% bill was not treated as law. Files: `docs/RESEARCH-LAGOS-FEES-2026-10-05.md`, `products/lagos-fee-screen-2026-10-05.txt`, `pages/lagosfees.html`. Not a sale.
-- Upload deploy `6ac3a83b9b82e244ffb28193` created 2026-10-05T13:38:03Z, state `error`, skipped, message "Skipped due to account credit usage exceeded", `published_at` null. Live site remains the 28 Sep deploy. Did not spend money.
-- Did not send outreach. Contacts remain 0.
+- Confirmed live homepage still serves the older build. New pages are on GitHub `main`, not on the Netlify production URL.
+- Re-checked FRED CSV `MORTGAGE30US`: week ending 2026-10-01 is 7.28, prior week 7.03. File: `docs/RESEARCH-FRED-MORTGAGE-2026-10-05.md`. Not a loan quote.
+- Added free collections reminder pack and generator. No messages sent. Files: `products/collections-reminder.txt`, `pages/collections.html`.
+- Did not spend money. Did not invent clients or form submissions.
 
 ## Blockers
 
+- Netlify production builds skipped: account credit usage exceeded.
+- Vercel team list returned zero teams, so a linked Vercel project was not created.
 - Cannot execute real WhatsApp/email outreach from this environment.
 - Waitlist is empty (verified 2026-10-05).
 - No payment rail. Do not mark a download as a sale.
-- Free Netlify production credit still exceeded. Live site remains the 28 Sep deploy.
 
 ## Next $0 actions
 
-1. Confirm a `ready` deploy whose commit includes `pages/lagosfees.html` before saying the fee screen is on the live URL.
-2. Hand the fee screen only if someone asks. Quote the $80–$150 briefing only after a written yes.
-3. Do not treat the May/June 2025 statements as a ruling on a named tenancy.
+1. Publish GitHub Pages from `main` so `pages/collections.html` has a URL that is not blocked by Netlify credits.
+2. Hand the collections pack only if someone asks. Quote the $150–$400 install only after a written yes.
+3. Do not treat the 7.28 print as a borrower-specific rate.

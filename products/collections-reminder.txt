@@ -1,0 +1,30 @@
+SERVICEHUB GLOBAL — COLLECTIONS REMINDER PACK
+Free lead magnet. Not a sale. Not legal advice. Not a debt-collection license.
+Verified sales of this file: $0.
+Install service (only after a written yes): $150–$400 to load this sequence into the client’s own inbox.
+
+Use only after an invoice the client already agreed to. Do not send to people who did not buy.
+
+DAY 0 — with the invoice
+Subject: Invoice {number} for {scope}
+Attached is invoice {number} for {amount}, due {date}. Scope covered: {one line}. Reply if a line is wrong before the due date.
+
+DAY 7 — if unpaid
+Subject: Invoice {number} due {date}
+Checking that invoice {number} ({amount}) reached you. Due date is {date}. Reply with a date you will pay, or with the line that is disputed.
+
+DAY 14
+Subject: Still open — invoice {number}
+Invoice {number} for {amount} is still open. Work already delivered: {one line}. I can pause the next item until this is paid. Tell me which you want.
+
+DAY 21
+Subject: Pause on new work — invoice {number}
+I am pausing new work on this account until invoice {number} ({amount}) is paid or we put the dispute in writing. This is not a court filing and not a credit report.
+
+DO NOT
+- Invent a late fee the quote did not state.
+- Threaten credit reporting, court, or a third-party collector.
+- Message relatives or a public group.
+- Mark the invoice paid inside ServiceHub. This site does not take payment.
+
+Source of the sequence: operator draft, 5 Oct 2026. No customer has been sent these lines from this workspace.

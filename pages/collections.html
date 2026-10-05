@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections reminder – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="invoice.html">Invoice</a><a href="products.html">Products</a><a href="offers.html">Offers</a></nav>
+  </header>
+  <main class="wrap">
+    <h1>Collections reminder</h1>
+    <p class="muted">Drafts only. Send from your own inbox after an agreed invoice. This page does not email anyone and does not record a payment.</p>
+    <form id="f">
+      <label>Invoice number <input name="num" required value="1001"></label>
+      <label>Amount <input name="amt" required value="250"></label>
+      <label>Due date <input name="due" required value="2026-10-12"></label>
+      <label>Scope line <input name="scope" required value="follow-up sequence installed"></label>
+      <button class="btn" type="submit">Build drafts</button>
+    </form>
+    <pre id="out" class="card"></pre>
+    <p><a class="btn btn-outline" href="../products/collections-reminder.txt" download>Download pack</a></p>
+  </main>
+  <script>
+    document.getElementById('f').onsubmit = function (e) {
+      e.preventDefault();
+      var d = Object.fromEntries(new FormData(e.target));
+      document.getElementById('out').textContent =
+        'DAY 0\nInvoice ' + d.num + ' for ' + d.amt + ', due ' + d.due + '. Scope: ' + d.scope + '. Reply if a line is wrong.\n\n' +
+        'DAY 7\nInvoice ' + d.num + ' (' + d.amt + ') due ' + d.due + '. Reply with a pay date or the disputed line.\n\n' +
+        'DAY 14\nInvoice ' + d.num + ' still open. Next item pauses until paid or disputed in writing.\n\n' +
+        'DAY 21\nNew work paused until invoice ' + d.num + ' is paid or the dispute is in writing. Not a court filing.';
+    };
+  </script>
+</body>
+</html>
