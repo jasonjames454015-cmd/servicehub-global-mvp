@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-10-04 14:35 WAT  
+Last updated: 2026-10-05 14:40 WAT  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -12,7 +12,7 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Pipeline value | $0.00 | No qualified opportunities with replies logged |
 | Digital product sales | $0.00 | Products remain free lead magnets |
 | Ad spend | $0.00 | Policy: never spend money |
-| Netlify form submissions | **0** | `get-submissions` for site `ff381168-7425-4941-be77-fc8ceedac47b`, form `6ab7c51de447e70008e0ffee`, returned `[]` on 2026-10-04 |
+| Netlify form submissions | **0** | `get-submissions` for site `ff381168-7425-4941-be77-fc8ceedac47b`, form `6ab7c51de447e70008e0ffee`, returned `[]` on 2026-10-05 |
 
 ## Platform
 
@@ -21,30 +21,28 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | GitHub repo | https://github.com/jasonjames454015-cmd/servicehub-global-mvp (public) |
 | Live URL | https://servicehub-global-mvp.netlify.app |
 | Production deploy | Still `6aba6ba2fe16e7000898d26f`, state ready, published 2026-09-28T13:29:14Z, commit `2d89e418`. Later commits are not on this deploy. |
-| Latest GitHub commit | products page `039ca1a`; this scoreboard commit records the skipped upload |
+| Latest GitHub commit | This scoreboard commit. Fee-screen commits land on `main` from `95e1da98` through `266417ea`. |
 | Persistence | Browser localStorage (`shg-v2`) + Netlify Forms when a visitor posts |
 | Transactions | Disabled |
-| Netlify Forms | Enabled; inbox empty on 2026-10-04 |
+| Netlify Forms | Enabled; inbox empty on 2026-10-05 |
 
-## Work completed this session (2026-10-04)
+## Work completed this session (2026-10-05)
 
-- Artifacts directory was empty; resumed from GitHub `servicehub-global-mvp`.
-- Re-read production deploy `6aba6ba2fe16e7000898d26f`: state ready, not skipped. Did not claim newer pages are live.
+- Workspace artifacts were empty. Resumed from GitHub `servicehub-global-mvp` and live site `https://servicehub-global-mvp.netlify.app`.
 - Form inbox returned an empty array. Did not invent waitlist emails.
-- Policy screen from free official pages: Freddie Mac PMMS still the 1 Oct 2026 print (30-year 7.28%, 15-year 6.60%); FRED MORTGAGE30US 2026-10-01 still 7.28; BoE Bank Rate held at 3.75% (17 Sep 2026, next decision 5 Nov 2026); CBN Communique 164 (22 Sep 2026) reset MPR to 23.00% with corridor +50/−300 bps. Note in `docs/RESEARCH-POLICY-RATES-2026-10-04.md`. Not a loan offer.
-- Added `pages/policyscreen.html`, `pages/retainer.html`, and blanks `products/policy-screen-2026-10-04.txt`, `products/retainer-split.txt`. Not sales.
-- Upload deploy `6ac2548969bdace3629c940d` created 2026-10-04T13:28:41Z, state `error`, skipped, message "Skipped due to account credit usage exceeded", `published_at` null. GitHub Pages create returned 403. Vercel team list was empty, so no Vercel project was created.
-- Did not send outreach. Contacts remain 0. Did not spend money.
+- Lagos fee screen from two official pages only: 13 May 2025 agreement/legal fee cap 10% of annual rent; 19 June 2025 agency fees stated as 0–10%. A blog claim of a 5% bill was not treated as law. Files: `docs/RESEARCH-LAGOS-FEES-2026-10-05.md`, `products/lagos-fee-screen-2026-10-05.txt`, `pages/lagosfees.html`. Not a sale.
+- Upload deploy `6ac3a83b9b82e244ffb28193` created 2026-10-05T13:38:03Z, state `error`, skipped, message "Skipped due to account credit usage exceeded", `published_at` null. Live site remains the 28 Sep deploy. Did not spend money.
+- Did not send outreach. Contacts remain 0.
 
 ## Blockers
 
 - Cannot execute real WhatsApp/email outreach from this environment.
-- Waitlist is empty (verified 2026-10-04).
+- Waitlist is empty (verified 2026-10-05).
 - No payment rail. Do not mark a download as a sale.
 - Free Netlify production credit still exceeded. Live site remains the 28 Sep deploy.
 
 ## Next $0 actions
 
-1. Confirm a `ready` deploy whose commit includes the policy screen and retainer page before saying they are on the live URL.
-2. Hand the policy screen only if someone asks. Quote the $80–$150 briefing only after a written yes.
-3. Do not treat PMMS, Bank Rate, or MPR as a subject-property value or a loan offer.
+1. Confirm a `ready` deploy whose commit includes `pages/lagosfees.html` before saying the fee screen is on the live URL.
+2. Hand the fee screen only if someone asks. Quote the $80–$150 briefing only after a written yes.
+3. Do not treat the May/June 2025 statements as a ruling on a named tenancy.
