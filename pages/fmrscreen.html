@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FY2026 FMR screen – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="research.html">Research</a><a href="products.html">Products</a><a href="quote.html">Quote</a></nav>
+  </header>
+  <main class="wrap">
+    <h1>FY2026 Fair Market Rent screen</h1>
+    <p class="warn">40th-percentile gross rent for a HUD area. Not a unit appraisal. Not Small Area FMR. Not a voucher payment standard.</p>
+    <p class="muted">Public HUD GIS rows read 6 Oct 2026. Coverage FY2026 (1 Oct 2025–30 Sep 2026). County name lookalikes excluded.</p>
+    <form id="f" class="card">
+      <label>HUD area
+        <select id="area"></select>
+      </label>
+      <label>Bedrooms
+        <select id="br">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </label>
+      <label>Proposed gross rent (USD / month)
+        <input id="rent" type="number" min="0" step="1" value="1800">
+      </label>
+      <button class="btn" type="submit">Compare</button>
+    </form>
+    <pre id="out" class="card"></pre>
+    <p><a class="btn" href="../products/hud-fmr-screen-2026-10-06.txt" download>Download table</a>
+       <a class="btn btn-outline" href="../docs/RESEARCH-HUD-FMR-2026-10-06.md">Open memo</a></p>
+    <p class="note">Briefing band $80–$150 only after a written yes. This page does not collect payment. Cash collected: $0.</p>
+  </main>
+  <script>
+    const rows = [
+      {name:"Atlanta-Sandy Springs-Roswell, GA HUD Metro FMR Area", code:"METRO12060M12060", r:[1585,1660,1820,2182,2605]},
+      {name:"Austin-Round Rock-San Marcos, TX MSA", code:"METRO12420M12420", r:[1474,1562,1852,2347,2760]},
+      {name:"Chicago-Joliet-Naperville, IL HUD Metro FMR Area", code:"METRO16980M16980", r:[1480,1581,1781,2294,2653]},
+      {name:"Dallas, TX HUD Metro FMR Area", code:"METRO19100M19100", r:[1582,1648,1931,2431,3091]},
+      {name:"Houston-The Woodlands-Sugar Land, TX HUD Metro FMR Area", code:"METRO26420M26420", r:[1280,1323,1573,2116,2639]},
+      {name:"Phoenix-Mesa-Chandler, AZ MSA", code:"METRO38060M38060", r:[1457,1583,1839,2452,2720]}
+    ];
+    const sel = document.getElementById("area");
+    rows.forEach((row, i) => {
+      const o = document.createElement("option");
+      o.value = i; o.textContent = row.name; sel.appendChild(o);
+    });
+    document.getElementById("f").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const row = rows[Number(sel.value)];
+      const br = Number(document.getElementById("br").value);
+      const rent = Number(document.getElementById("rent").value);
+      const fmr = row.r[br];
+      const ratio = fmr ? (rent / fmr) : 0;
+      document.getElementById("out").textContent =
+        row.name + "\n" + row.code +
+        "\n" + br + "BR FMR: $" + fmr +
+        "\nProposed: $" + rent +
+        "\nRatio to FMR: " + ratio.toFixed(2) +
+        "\n\nAbove 1.00 is not an overpricing finding. Re-check HUD User before a client briefing.";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+HUD FY2026 FMR SCREEN — ServiceHub Global
+Read: 2026-10-06. Not an appraisal. Not a unit rent quote. Not SAFMR.
+Source: HUD GIS Fair Market Rents feature service, FY2026 coverage (1 Oct 2025–30 Sep 2026).
+Method context: Federal Register 22 Aug 2025; ACS 2019–2023 base; effective 1 Oct 2025.
+https://www.huduser.gov/portal/datasets/fmr.html
+
+Metro rows only. County lookalikes excluded.
+
+Atlanta-Sandy Springs-Roswell, GA HUD Metro FMR Area | METRO12060M12060 | 0BR 1585 | 1BR 1660 | 2BR 1820 | 3BR 2182 | 4BR 2605
+Austin-Round Rock-San Marcos, TX MSA | METRO12420M12420 | 0BR 1474 | 1BR 1562 | 2BR 1852 | 3BR 2347 | 4BR 2760
+Chicago-Joliet-Naperville, IL HUD Metro FMR Area | METRO16980M16980 | 0BR 1480 | 1BR 1581 | 2BR 1781 | 3BR 2294 | 4BR 2653
+Dallas, TX HUD Metro FMR Area | METRO19100M19100 | 0BR 1582 | 1BR 1648 | 2BR 1931 | 3BR 2431 | 4BR 3091
+Houston-The Woodlands-Sugar Land, TX HUD Metro FMR Area | METRO26420M26420 | 0BR 1280 | 1BR 1323 | 2BR 1573 | 3BR 2116 | 4BR 2639
+Phoenix-Mesa-Chandler, AZ MSA | METRO38060M38060 | 0BR 1457 | 1BR 1583 | 2BR 1839 | 3BR 2452 | 4BR 2720
+
+Use: proposed gross rent / 2BR FMR for the same HUD area. Ratio is not a pricing opinion.
+Do not apply a Houston metro FMR to Houston County, TX, or a Dallas metro FMR to Dallas County, AL/AR/MO.
+
+Paid briefing band $80–$150 only after a written yes. This download is not a sale.
+Cash collected to date: $0.
