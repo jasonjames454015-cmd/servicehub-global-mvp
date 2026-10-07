@@ -1,0 +1,23 @@
+ServiceHub Global — policy and inflation screen
+Date read: 7 October 2026
+Status: free lead magnet. Not a sale. Cash collected $0.
+
+US
+FRED MORTGAGE30US latest observation 2026-10-01 = 7.28 (prior week 7.03).
+CSV: https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US
+Next Thursday print is 8 October 2026. Not published when this file was written.
+Not a borrower rate.
+
+UK
+Bank of England decision page: Bank Rate 3.75%. Decision published 17 September 2026. Next due 5 November 2026.
+Page states inflation 3.1%, target 2%.
+https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate
+Vote not re-read this session.
+
+Nigeria
+CBN Communique 164 (22 September 2026): MPR 23.00%. Corridor +50 / -300 bp. CRR unchanged (DMB 45%, merchant 16%, non-TSA public 75%).
+NBS August 2026 CPI (released 15 September 2026): headline 15.39% y/y, 0.71% m/m. Food 19.57% y/y, 1.02% m/m.
+https://microdata.nigerianstat.gov.ng/index.php/catalog/154
+September 2026 CPI not on the catalog on 7 October 2026.
+
+Do not blend these rates. Briefing band $80-$150 only after a written yes.

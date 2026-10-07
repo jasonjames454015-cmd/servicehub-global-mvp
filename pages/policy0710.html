@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy screen 7 Oct 2026 – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="products.html">Products</a><a href="research.html">Research</a><a href="quote.html">Quote</a></nav>
+  </header>
+  <main class="wrap">
+    <h1>Policy and inflation screen</h1>
+    <p class="muted">Read 7 October 2026 from public sources. Not a loan quote. Not a blended rate. Not a forecast.</p>
+    <table>
+      <thead><tr><th>Series</th><th>Print</th><th>As of</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>US 30-year PMMS (FRED MORTGAGE30US)</td><td>7.28%</td><td>1 Oct 2026</td><td>FRED CSV, pulled 7 Oct</td></tr>
+        <tr><td>UK Bank Rate</td><td>3.75%</td><td>Decision published 17 Sep 2026</td><td>Bank of England decision page</td></tr>
+        <tr><td>UK inflation on that page</td><td>3.1%</td><td>Page last updated 18 Sep 2026</td><td>Same BoE page; target 2%</td></tr>
+        <tr><td>Nigeria MPR</td><td>23.00%</td><td>Communique 164, 22 Sep 2026</td><td>CBN MPC</td></tr>
+        <tr><td>Nigeria headline CPI</td><td>15.39% y/y; 0.71% m/m</td><td>August 2026, released 15 Sep</td><td>NBS catalog 154</td></tr>
+        <tr><td>Nigeria food CPI</td><td>19.57% y/y; 1.02% m/m</td><td>August 2026</td><td>NBS</td></tr>
+      </tbody>
+    </table>
+    <p class="warn">September 2026 Nigeria CPI was not on the NBS catalog on 7 October. The next US PMMS Thursday is 8 October — do not fill it in. Corridor on the CBN communique is +50 / −300 bp. CRR was retained.</p>
+    <p><a class="btn" href="../products/policy-screen-2026-10-07.txt" download>Download text pack</a>
+       <a class="btn btn-outline" href="../docs/RESEARCH-POLICY-2026-10-07.md">Open memo</a></p>
+    <h2>Request a briefing</h2>
+    <p class="muted">Band $80–$150 only after a written yes. This form is not a payment and not a contract. Submissions stay at zero until the live host accepts the form.</p>
+    <form name="briefing" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="briefing">
+      <p style="display:none;"><label>Don’t fill <input name="bot-field"></label></p>
+      <label>Email</label>
+      <input type="email" name="email" required>
+      <label>Market (US / UK / Nigeria)</label>
+      <input name="market" required>
+      <label>What you need checked</label>
+      <textarea name="need" required></textarea>
+      <button class="btn" type="submit" style="margin-top:1rem;">Send request</button>
+    </form>
+    <p class="note">Cash collected: $0. No client is created by downloading this page.</p>
+  </main>
+</body>
+</html>
