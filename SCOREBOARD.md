@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-10-07 13:40 UTC  
+Last updated: 2026-10-07 13:32 UTC  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -20,7 +20,9 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | --- | --- |
 | GitHub repo | https://github.com/jasonjames454015-cmd/servicehub-global-mvp (public) |
 | Live production URL | https://servicehub-global-mvp.netlify.app — still the 28 Sep deploy `6aba6ba2fe16e7000898d26f` (ready) until a new deploy publishes |
-| 6 Oct deploy | `6ac4f7f47a7b31890242d309`, state `error`, skipped, "Skipped due to account credit usage exceeded" |
+| 7 Oct deploy | `6ac649803d0fa5547c433d17`, state `error`, skipped, "Skipped due to account credit usage exceeded", `published_at` null. Production remains 28 Sep deploy `6aba6ba2fe16e7000898d26f`. |
+| Git commit | `2c5a61e` policy screen |
+| Free file mirror | jsDelivr HTTP 200 on `2c5a61e` for `products/policy-screen-2026-10-07.txt` |
 | GitHub Pages | GET pages still 404. POST create returned 403 "Resource not accessible by integration" on 7 Oct. Not enabled. |
 | Vercel | No projects. |
 | Transactions | Disabled |
@@ -33,7 +35,8 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 - NBS catalog 154 and NBS post still show August 2026 CPI: headline 15.39% y/y, 0.71% m/m; food 19.57% y/y, 1.02% m/m. September CPI not listed.
 - CBN Communique 164 remains the MPR source (23.00%, corridor +50/−300). Punch 7 Oct article treated as secondary only.
 - Added memo, text pack, and comparison page. Briefing band $80–$150 only after a written yes. Not a sale.
-- Did not send outreach. Did not spend money.
+- Netlify upload started then skipped for credit limit (`6ac649803d0fa5547c433d17`). Did not spend money. Did not send outreach.
+- jsDelivr returned HTTP 200 for the text pack at commit `2c5a61e`.
 
 ## Blockers
 
