@@ -1,0 +1,42 @@
+ServiceHub Global — NPC asking-price screen
+Date read: 8 October 2026
+Status: free lead magnet. Sales to date: $0. Not a valuation.
+
+USE
+- Quote Nigeria Property Centre and link the report if you republish. Their index says figures are free to quote with credit.
+- Keep Q3 quarterly medians, the September average-price page, and the Q4 index counts in separate lines.
+- Do not blend with FRED 7.28%, BoE 3.75%, or CBN MPR 23%.
+
+Q4 INDEX ONLY (detail page did not load)
+- Published 3 Oct 2026, updated 5 Oct 2026, window 1 Oct–31 Dec 2026
+- 135,391 listings, 18 states, 46 areas
+- Method: asking prices, median headline, drop under 20 listings, drop USD ads, drop rents under N50,000 and sales under N300,000
+- No Q4 median invented
+
+Q3 PAGE (updated 28 Sep 2026)
+- National median rent N13m/yr
+- National median sale N320m
+- Median 3-bed to buy N200m
+- Median land per plot N25m
+- Highest gross yield shown: 7.5% Abuja 2-bed on N100m asking, 720 listings
+- Lagos 3-bed gross yield shown 7.2% on N250m asking, 10,158 listings
+- State median rent: Abuja N13.5m, Lagos N13m, Oyo N4m, Rivers N4m, Ogun N2m
+- Lagos buy median on that page N350m across 76,695 listings
+- Gross only. Not net of agency, service charge, voids, power, or repairs.
+
+SEPTEMBER AVERAGE-PRICE PAGE (updated 1 Oct 2026)
+- Lagos house rent median N20.2m/yr
+- Abuja house rent median N18.1m/yr
+- Lagos flat rent median N11.7m/yr
+- Abuja flat rent median N7.7m/yr
+- Lagos house sale cited N433.5m vs Plateau N32.3m
+- Page also showed house-sale YoY -99.8%. Treat as a page anomaly. Do not quote as a crash.
+
+RE-CHECKS
+- FRED MORTGAGE30US CSV latest row still 2026-10-01 = 7.28. No 8 Oct row.
+- NBS catalog 154 still August 2026 CPI (file date 15 Sep 2026). September CPI not listed.
+- Waitlist submissions: empty array. No contacts.
+
+OFFER
+Briefing that keeps the series separate: $80-$150 after a written yes. Not a sale.
+Sources: nigeriapropertycentre.com/market-reports and /market-reports/q3-2026 and /market-trends/average-prices
