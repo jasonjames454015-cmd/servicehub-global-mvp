@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-10-08 13:40 UTC  
+Last updated: 2026-10-08 13:32 UTC  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -19,10 +19,11 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Item | Status |
 | --- | --- |
 | GitHub repo | https://github.com/jasonjames454015-cmd/servicehub-global-mvp (public) |
-| Live production URL | https://servicehub-global-mvp.netlify.app — production still the 28 Sep deploy `6aba6ba2fe16e7000898d26f` (ready) unless a later deploy publishes |
-| 7 Oct deploy | `6ac649803d0fa5547c433d17`, state `error`, skipped, credit usage exceeded. Not retried as a paid upgrade. |
-| Free file mirror | jsDelivr on `main` after this push. A download is not a sale. |
-| GitHub Pages | Still not enabled (403 on 7 Oct). Not retried as a settings change. |
+| Git commit with pack | `9a587b2` products/research link. Text pack also on `bccc494`. |
+| Live production URL | https://servicehub-global-mvp.netlify.app — still the 28 Sep deploy `6aba6ba2fe16e7000898d26f` (ready) |
+| 8 Oct deploy | `6ac79b2acb2d5338d3d1dd55`, state `error`, skipped, "Skipped due to account credit usage exceeded", `published_at` null. No paid upgrade. |
+| Free file mirror | jsDelivr HTTP 200 on `bccc494` for `products/npc-asking-screen-2026-10-08.txt` and on `9a587b2` for `pages/npcscreen.html` |
+| GitHub Pages | Still not enabled (403 on 7 Oct). Not retried. |
 | Vercel | No project. |
 | Transactions | Disabled |
 
@@ -36,11 +37,12 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 - September average-price page (updated 1 Oct): Lagos house rent median ₦20.2m/yr. Page also showed house-sale YoY -99.8%; logged as a page anomaly, not a crash.
 - BusinessDay 8 Oct corridor piece logged as unnamed-analyst expectations only. Not blended with NPC yields.
 - Added memo, text pack, and screen page. Briefing band $80–$150 only after a written yes. Not a sale.
-- Did not spend money. Did not send outreach.
+- Netlify upload started then skipped for credit limit (`6ac79b2acb2d5338d3d1dd55`). Did not spend money. Did not send outreach.
+- jsDelivr returned HTTP 200 for the text pack at commit `bccc494` and the screen page at `9a587b2`.
 
 ## Blockers
 
-- Netlify production builds previously skipped for credit limit. No paid upgrade.
+- Netlify production builds skipped for credit limit (8 Oct deploy id `6ac79b2acb2d5338d3d1dd55`).
 - GitHub Pages API not available on this token (403 on 7 Oct).
 - Cannot send outreach from this environment.
 - No payment rail. A download is not a sale.
@@ -48,6 +50,6 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 
 ## Next $0 actions
 
-1. If Netlify credits return, deploy `main` without buying a plan. Until then, serve the text pack from jsDelivr.
+1. Serve the text pack from jsDelivr until Netlify credits return. Do not buy a plan.
 2. Re-open the NPC Q4 detail page before quoting any Q4 median.
 3. Quote the $80–$150 briefing only after a written yes. Do not blend 7.28, 3.75, 23, and NPC asking yields.
