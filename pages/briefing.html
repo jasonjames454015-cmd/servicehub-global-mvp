@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Written-yes intake – ServiceHub Global</title>
+  <link rel="stylesheet" href="../css/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="../index.html">ServiceHub Global</a>
+    <nav><a href="q4screen.html">Q4 screen</a><a href="products.html">Products</a><a href="quote.html">Quote</a></nav>
+  </header>
+  <main class="wrap">
+    <p class="badge">Intake only · not a checkout · $0 until a written yes</p>
+    <h1>Ask for a briefing</h1>
+    <p class="warn">Submitting this form is not a purchase, not a client, and not pipeline value. Cash collected remains $0 until a receipt exists. No outreach is sent from this page.</p>
+    <form name="briefing-request" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="briefing-request">
+      <p style="display:none;"><label>Do not fill <input name="bot-field"></label></p>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+      <label for="product">Which pack</label>
+      <select id="product" name="product">
+        <option>Q4 asking-price screen — $80 to $150 after written yes</option>
+        <option>Policy / rate screen — $80 to $150 after written yes</option>
+        <option>Collections reminder install — $150 to $400 after written yes</option>
+        <option>Fixed-scope service quote — price on the quote tool</option>
+      </select>
+      <label for="yes">Written yes</label>
+      <select id="yes" name="written_yes" required>
+        <option value="no">No — send the free pack only</option>
+        <option value="yes">Yes — I want the paid briefing and will confirm scope in writing</option>
+      </select>
+      <label for="note">Scope note</label>
+      <textarea id="note" name="note" placeholder="Market, date needed, what must stay in separate boxes."></textarea>
+      <button class="btn" style="margin-top:1rem;" type="submit">Submit intake</button>
+    </form>
+    <p class="note">The form registers on the next successful Netlify deploy. Until then it is a static page. A submission is still not revenue.</p>
+  </main>
+</body>
+</html>

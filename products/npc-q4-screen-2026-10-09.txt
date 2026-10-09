@@ -1,0 +1,36 @@
+ServiceHub Global — NPC Q4 2026 asking-price screen
+Read 9 Oct 2026. Free lead magnet. Not a sale. Cash collected: $0.
+
+NOT brokerage. NOT a valuation. NOT a title search. NOT a loan quote.
+Do not blend with FRED 7.40%, BoE Bank Rate, or CBN MPR.
+
+SOURCE LIMIT
+Direct browser open hit a Cloudflare check. Figures are from the indexed public page:
+https://nigeriapropertycentre.com/market-reports/q4-2026
+Published 3 Oct 2026, updated 5 Oct 2026. Coverage label 1 Oct–31 Dec 2026.
+The quarter is not finished. 0% QoQ is an early-window reading.
+
+Q4 ASKING PRICES (page extract)
+National median rent: N13,000,000/yr across 41,827 listings. QoQ shown 0%.
+National median sale: N320,000,000 across 93,564 listings. QoQ shown 0%.
+Median 3-bed to buy: N200,000,000. QoQ shown 0%.
+Rent top 5: Abuja N13.5m/yr, Lagos N13m/yr, Rivers N6.5m/yr, Oyo N4m/yr, Ogun N1.5m/yr.
+Sale top 9: Lagos N350m, Abuja N350m, Rivers N220m, Oyo N150m, Enugu N150m, Delta N150m, Edo N130m, Ogun N65m, Akwa Ibom N50m (244 listings).
+Index card: 135,391 listings, 18 states, 46 areas.
+Agent-recorded median days: 76 to sell, 26 to let, last 12 months, 5,522 completed sales. Not an expected wait.
+Price changes shown: 0.2% cut, 0.2% raised, median cut 7.9%.
+No Q4 gross yield in this extract. Do not reuse the 8 Oct Q3 7.5% Abuja 2-bed figure as Q4.
+
+DO NOT MERGE
+September average-price page (updated 1 Oct 2026) Lagos house rent median N20.2m/yr is a house-only series.
+House-sale YoY of -99.8% on that page remains a page anomaly, not a crash.
+
+SAME-DAY RECHECKS
+FRED MORTGAGE30US CSV last row 2026-10-08 = 7.40 (prior 2026-10-01 = 7.28). Not a loan quote.
+Freddie Mac PMMS page: 15-year 6.73% as of 10/08/2026. Not a loan quote.
+NBS catalog 154: August 2026 CPI file still dated 15 Sep 2026. September CPI not listed.
+Netlify waitlist submissions: empty array. No contacts.
+
+OFFER
+Briefing that keeps the three series in separate boxes: $80-$150 only after a written yes.
+A download is not a sale.
