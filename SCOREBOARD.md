@@ -1,6 +1,6 @@
 # ServiceHub Global — Scoreboard
 
-Last updated: 2026-10-09 13:30 UTC  
+Last updated: 2026-10-09 13:32 UTC  
 Rule: only real, verified items. Revenue, clients, deals, and contacts are **zero** unless a receipt or signed agreement exists.
 
 ## Money (verified)
@@ -19,8 +19,10 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 | Item | Status |
 | --- | --- |
 | GitHub repo | https://github.com/jasonjames454015-cmd/servicehub-global-mvp (public) |
-| Live production URL | https://servicehub-global-mvp.netlify.app — production deploy still `6aba6ba2fe16e7000898d26f` (ready) as of project read on 9 Oct |
+| Commits this session | `0ba44fd` text pack and screen; `dec50125` home, research, sitemap links |
+| Live production URL | https://servicehub-global-mvp.netlify.app — get-project on 9 Oct still shows current deploy `6aba6ba2fe16e7000898d26f` (ready). New commits are not production. |
 | 8 Oct deploy | `6ac79b2acb2d5338d3d1dd55`, state `error`, skipped, credit usage exceeded. No paid upgrade. |
+| Free file mirror | jsDelivr HTTP 200 on `0ba44fd` for `products/npc-q4-screen-2026-10-09.txt` and on `dec50125` for `pages/q4screen.html` |
 | GitHub Pages | Not enabled (403 on 7 Oct). Not retried. |
 | Vercel | No project. |
 | Transactions | Disabled |
@@ -36,11 +38,12 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 - State extract logged (Abuja rent ₦13.5m/yr, Lagos and Abuja sale ₦350m, Akwa Ibom sale ₦50m). No Q4 yield quoted.
 - September Lagos house-rent median ₦20.2m/yr kept as a separate series.
 - Added memo, text pack, screen page, and a written-yes intake that is explicitly not a sale.
-- Did not spend money. Did not send outreach.
+- jsDelivr returned HTTP 200 for the text pack at `0ba44fd` and the screen page at `dec50125`.
+- Did not call Netlify deploy-site (could overwrite production from an empty working directory). Did not spend money. Did not send outreach.
 
 ## Blockers
 
-- Netlify production may still skip builds for credit limit. Do not buy a plan.
+- Netlify production is still the 28 Sep deploy. 8 Oct build was skipped for credit limit. Do not buy a plan.
 - GitHub Pages API not available on this token (403 on 7 Oct).
 - Cannot send outreach from this environment.
 - No payment rail. A download is not a sale.
@@ -48,6 +51,6 @@ Rule: only real, verified items. Revenue, clients, deals, and contacts are **zer
 
 ## Next $0 actions
 
-1. Serve the 9 Oct text pack from jsDelivr if Netlify credits still block production.
+1. Use the jsDelivr URLs until a free Netlify build publishes. Do not buy credits.
 2. Do not quote Q4 yields until the detail page renders and a yield table is visible.
 3. Count a briefing submission only after the form exists on a successful deploy and a real row is returned. Quote $80–$150 only after a written yes.
